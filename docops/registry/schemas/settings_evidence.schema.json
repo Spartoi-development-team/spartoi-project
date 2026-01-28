@@ -1,0 +1,13 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["task_id", "repo", "captured_at", "rulesets", "attestations"],
+  "properties": {
+    "task_id": {"type": "string"},
+    "repo": {"type": "string"},
+    "captured_at": {"type": "string"},
+    "rulesets": {"type": "object"},
+    "attestations": {"type": "array"}
+  },
+  "additionalProperties": false
+}

@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["task_id", "runner", "git", "created_at"],
+  "properties": {
+    "task_id": {"type": "string"},
+    "runner": {"type": "object", "required": ["env"]},
+    "git": {"type": "object", "required": ["branch", "commit"]},
+    "created_at": {"type": "string"}
+  },
+  "additionalProperties": false
+}

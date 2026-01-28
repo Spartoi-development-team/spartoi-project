@@ -1,0 +1,1 @@
+OK: required check = docops-gatekit/finalize

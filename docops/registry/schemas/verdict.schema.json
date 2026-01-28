@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["task_id", "status", "judges", "created_at"],
+  "properties": {
+    "task_id": {"type": "string"},
+    "status": {"type": "string", "enum": ["PASS", "FAIL"]},
+    "judges": {"type": "array", "minItems": 2},
+    "created_at": {"type": "string"}
+  },
+  "additionalProperties": false
+}
