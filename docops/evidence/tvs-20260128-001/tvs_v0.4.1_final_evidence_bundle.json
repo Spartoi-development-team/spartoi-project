@@ -2,12 +2,99 @@
   "meta": {
     "task_id": "tvs-20260128-001",
     "tvs_version": "v0.4.1",
-    "bundled_at": "2026-01-28T14:09:47.366663+00:00",
-    "purpose": "TVS v0.4.1 §9 Acceptance Criteria - Complete Evidence Bundle",
-    "updated_at": "2026-01-28T15:55:54.548400+00:00",
-    "version": "v2.0.0",
-    "includes_rd01": true,
-    "includes_tvs_section9": true
+    "bundled_at": "2026-01-28T15:09:33.914065+00:00",
+    "purpose": "TVS v0.4.1 §9 Complete Evidence Bundle"
+  },
+  "evidence_files": {
+    "branch_protection": {},
+    "evidence_index": {
+      "task_id": "tvs-20260128-001",
+      "created_at": "2026-01-28T14:09:32.373062+00:00",
+      "tvs_version": "v0.4.1",
+      "evidence_files": {
+        "A_control_plane": {
+          "repo_info.json": {
+            "status": "PRESENT",
+            "size_bytes": 7691,
+            "sha256": "3f88345f910e32d7d9b5a3a2f7bad1e7666ab7ead300c7b678afbcc94205be44"
+          },
+          "settings_evidence.json": {
+            "status": "PRESENT",
+            "size_bytes": 1783,
+            "sha256": "49558eb1e37225177192f688b14ac581b7bbb495acc0647256d570d86fabf76f"
+          },
+          "rulesets_detail.json": {
+            "status": "PRESENT",
+            "size_bytes": 988,
+            "sha256": "afb320a4ec8894d96906c5b1786f96498c5322267bda8bb58e5cf6619222ce72"
+          },
+          "branch_protection.json": {
+            "status": "PRESENT",
+            "size_bytes": 3,
+            "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
+          },
+          "workflow_runs.json": {
+            "status": "PRESENT",
+            "size_bytes": 72377,
+            "sha256": "6abca8b731d8971ca1d9cbba19d01ec81068b5aaf5371f2a5ba4eaa7407b7dc0"
+          }
+        },
+        "B_execution_plane": {
+          "input_manifest.json": {
+            "status": "PRESENT",
+            "size_bytes": 252,
+            "sha256": "c9fca830eacc41bde56c89a633128c9aea157c0ff8fba7fa606c28da51d0f14b"
+          },
+          "run_manifest.json": {
+            "status": "PRESENT",
+            "size_bytes": 273,
+            "sha256": "9d612a1ef58023bfa837f19e2c1054c6d2cfae2a22ab165b283f684f91c45808"
+          },
+          "gate_report.json": {
+            "status": "PRESENT",
+            "size_bytes": 684,
+            "sha256": "5f153ba6d96034249516a42dac63f2b10bbf315a403177596a61d5f115942382"
+          },
+          "verdict.json": {
+            "status": "PRESENT",
+            "size_bytes": 325,
+            "sha256": "3ca1c78c913ad3ae973700cc2cc1e356ba335473564a30a06770720b75adcc66"
+          },
+          "check_name_consistency.txt": {
+            "status": "PRESENT",
+            "size_bytes": 45,
+            "sha256": "c5e0e9cb25438a34af8f6b65ec285bc19a16210dcee9db45a5a94f4eb6e45d60"
+          }
+        },
+        "C_dual_judge": {
+          "judge_a_verdict.json": {
+            "status": "PRESENT",
+            "size_bytes": 480,
+            "sha256": "20018cd074e98dff47992f85a793001def2e6640766a3bbe22f5ee4ba0d53cb1"
+          },
+          "judge_b_verdict.json": {
+            "status": "PRESENT",
+            "size_bytes": 1873,
+            "sha256": "408a1df33ff557e04895d68647428ce45b7d5fa856c476449b619f7004e74071"
+          },
+          "final_aggregate_verdict.json": {
+            "status": "PRESENT",
+            "size_bytes": 437,
+            "sha256": "c2c2ea3d14fc7e4886e118483c9c183a8099eb8ce39d3e4e038514649741de74"
+          }
+        },
+        "D_workflow": {
+          "docops-gatekit.yml.evidence": {
+            "status": "PRESENT",
+            "size_bytes": 1098,
+            "sha256": "273fc8bff77aafbceb42fba12b43f68e46af98385b7bad927b032d43346a1b27"
+          }
+        }
+      },
+      "complete": true,
+      "verdict": "PASS"
+    },
+    "check_name_consistency": "OK: required check = docops-gatekit/finalize\nSSOT: docops/registry/gatekit.yaml\n"
   },
   "A_control_plane": {
     "repo_info": {
@@ -153,61 +240,7 @@
       "network_count": 0,
       "subscribers_count": 0
     },
-    "settings_evidence": {
-      "task_id": "tvs-20260128-001",
-      "repo": "Spartoi-development-team/spartoi-project",
-      "captured_at": "2026-01-28T14:09:14.903425+00:00",
-      "rulesets": {
-        "repo_rulesets": [
-          {
-            "id": 12207798,
-            "name": "main",
-            "target": "branch",
-            "source_type": "Repository",
-            "source": "Spartoi-development-team/spartoi-project",
-            "enforcement": "active",
-            "node_id": "RRS_lACqUmVwb3NpdG9yec5ELwI6zgC6RrY",
-            "_links": {
-              "self": {
-                "href": "https://api.github.com/repos/Spartoi-development-team/spartoi-project/rulesets/12207798"
-              },
-              "html": {
-                "href": "https://github.com/Spartoi-development-team/spartoi-project/rules/12207798"
-              }
-            },
-            "created_at": "2026-01-28T05:55:14.523Z",
-            "updated_at": "2026-01-28T05:55:14.575Z"
-          },
-          {
-            "id": 12219645,
-            "name": "main-protection",
-            "target": "branch",
-            "source_type": "Repository",
-            "source": "Spartoi-development-team/spartoi-project",
-            "enforcement": "active",
-            "node_id": "RRS_lACqUmVwb3NpdG9yec5ELwI6zgC6dP0",
-            "_links": {
-              "self": {
-                "href": "https://api.github.com/repos/Spartoi-development-team/spartoi-project/rulesets/12219645"
-              },
-              "html": {
-                "href": "https://github.com/Spartoi-development-team/spartoi-project/rules/12219645"
-              }
-            },
-            "created_at": "2026-01-28T13:11:57.891Z",
-            "updated_at": "2026-01-28T13:11:57.943Z"
-          }
-        ]
-      },
-      "attestations": [],
-      "repo_visibility": "public",
-      "repo_owner_type": "Organization",
-      "workflow_checks": {
-        "merge_group_trigger": true,
-        "workflow_file": ".github/workflows/docops-gatekit.yml"
-      }
-    },
-    "rulesets_detail": [
+    "rulesets_full_detail": [
       {
         "id": 12207798,
         "name": "main",
@@ -215,7 +248,58 @@
         "source_type": "Repository",
         "source": "Spartoi-development-team/spartoi-project",
         "enforcement": "active",
+        "conditions": {
+          "ref_name": {
+            "exclude": [],
+            "include": [
+              "~DEFAULT_BRANCH"
+            ]
+          }
+        },
+        "rules": [
+          {
+            "type": "deletion"
+          },
+          {
+            "type": "non_fast_forward"
+          },
+          {
+            "type": "pull_request",
+            "parameters": {
+              "required_approving_review_count": 0,
+              "dismiss_stale_reviews_on_push": true,
+              "required_reviewers": [],
+              "require_code_owner_review": true,
+              "require_last_push_approval": false,
+              "required_review_thread_resolution": true,
+              "allowed_merge_methods": [
+                "merge",
+                "squash",
+                "rebase"
+              ]
+            }
+          },
+          {
+            "type": "merge_queue",
+            "parameters": {
+              "merge_method": "SQUASH",
+              "max_entries_to_build": 2,
+              "min_entries_to_merge": 1,
+              "max_entries_to_merge": 1,
+              "min_entries_to_merge_wait_minutes": 1,
+              "grouping_strategy": "ALLGREEN",
+              "check_response_timeout_minutes": 60
+            }
+          },
+          {
+            "type": "required_linear_history"
+          }
+        ],
         "node_id": "RRS_lACqUmVwb3NpdG9yec5ELwI6zgC6RrY",
+        "created_at": "2026-01-28T05:55:14.523Z",
+        "updated_at": "2026-01-28T05:55:14.575Z",
+        "bypass_actors": [],
+        "current_user_can_bypass": "never",
         "_links": {
           "self": {
             "href": "https://api.github.com/repos/Spartoi-development-team/spartoi-project/rulesets/12207798"
@@ -223,9 +307,7 @@
           "html": {
             "href": "https://github.com/Spartoi-development-team/spartoi-project/rules/12207798"
           }
-        },
-        "created_at": "2026-01-28T05:55:14.523Z",
-        "updated_at": "2026-01-28T05:55:14.575Z"
+        }
       },
       {
         "id": 12219645,
@@ -234,7 +316,67 @@
         "source_type": "Repository",
         "source": "Spartoi-development-team/spartoi-project",
         "enforcement": "active",
+        "conditions": {
+          "ref_name": {
+            "exclude": [],
+            "include": [
+              "~DEFAULT_BRANCH"
+            ]
+          }
+        },
+        "rules": [
+          {
+            "type": "deletion"
+          },
+          {
+            "type": "non_fast_forward"
+          },
+          {
+            "type": "pull_request",
+            "parameters": {
+              "required_approving_review_count": 0,
+              "dismiss_stale_reviews_on_push": false,
+              "required_reviewers": [],
+              "require_code_owner_review": false,
+              "require_last_push_approval": false,
+              "required_review_thread_resolution": false,
+              "allowed_merge_methods": [
+                "merge",
+                "squash",
+                "rebase"
+              ]
+            }
+          },
+          {
+            "type": "required_status_checks",
+            "parameters": {
+              "strict_required_status_checks_policy": false,
+              "do_not_enforce_on_create": false,
+              "required_status_checks": [
+                {
+                  "context": "docops-gatekit/finalize"
+                }
+              ]
+            }
+          },
+          {
+            "type": "merge_queue",
+            "parameters": {
+              "merge_method": "MERGE",
+              "max_entries_to_build": 5,
+              "min_entries_to_merge": 1,
+              "max_entries_to_merge": 5,
+              "min_entries_to_merge_wait_minutes": 5,
+              "grouping_strategy": "ALLGREEN",
+              "check_response_timeout_minutes": 60
+            }
+          }
+        ],
         "node_id": "RRS_lACqUmVwb3NpdG9yec5ELwI6zgC6dP0",
+        "created_at": "2026-01-28T13:11:57.891Z",
+        "updated_at": "2026-01-28T13:11:57.943Z",
+        "bypass_actors": [],
+        "current_user_can_bypass": "never",
         "_links": {
           "self": {
             "href": "https://api.github.com/repos/Spartoi-development-team/spartoi-project/rulesets/12219645"
@@ -242,9 +384,7 @@
           "html": {
             "href": "https://github.com/Spartoi-development-team/spartoi-project/rules/12219645"
           }
-        },
-        "created_at": "2026-01-28T13:11:57.891Z",
-        "updated_at": "2026-01-28T13:11:57.943Z"
+        }
       }
     ],
     "workflow_runs": {
@@ -1371,9 +1511,446 @@
           }
         }
       ]
-    }
+    },
+    "rulesets_detail": [
+      {
+        "id": 12207798,
+        "name": "main",
+        "target": "branch",
+        "source_type": "Repository",
+        "source": "Spartoi-development-team/spartoi-project",
+        "enforcement": "active",
+        "node_id": "RRS_lACqUmVwb3NpdG9yec5ELwI6zgC6RrY",
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/Spartoi-development-team/spartoi-project/rulesets/12207798"
+          },
+          "html": {
+            "href": "https://github.com/Spartoi-development-team/spartoi-project/rules/12207798"
+          }
+        },
+        "created_at": "2026-01-28T05:55:14.523Z",
+        "updated_at": "2026-01-28T05:55:14.575Z"
+      },
+      {
+        "id": 12219645,
+        "name": "main-protection",
+        "target": "branch",
+        "source_type": "Repository",
+        "source": "Spartoi-development-team/spartoi-project",
+        "enforcement": "active",
+        "node_id": "RRS_lACqUmVwb3NpdG9yec5ELwI6zgC6dP0",
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/Spartoi-development-team/spartoi-project/rulesets/12219645"
+          },
+          "html": {
+            "href": "https://github.com/Spartoi-development-team/spartoi-project/rules/12219645"
+          }
+        },
+        "created_at": "2026-01-28T13:11:57.891Z",
+        "updated_at": "2026-01-28T13:11:57.943Z"
+      }
+    ],
+    "settings_evidence_v2": {
+      "task_id": "tvs-20260128-001",
+      "schema_version": "tvs-v0.4.1-§8.3",
+      "captured_at": "2026-01-28T14:59:25.130670+00:00",
+      "A1_repo": {
+        "full_name": "Spartoi-development-team/spartoi-project",
+        "visibility": "public",
+        "owner_type": "Organization",
+        "is_org_owned_public": true
+      },
+      "A2_ruleset_exists": {
+        "count": 2,
+        "names": [
+          "main",
+          "main-protection"
+        ],
+        "exists": true
+      },
+      "A3_required_status_checks": {
+        "api_capture": [
+          {
+            "ruleset_name": "main-protection",
+            "contexts": [
+              "docops-gatekit/finalize"
+            ],
+            "raw_parameters": {
+              "strict_required_status_checks_policy": false,
+              "do_not_enforce_on_create": false,
+              "required_status_checks": [
+                {
+                  "context": "docops-gatekit/finalize"
+                }
+              ]
+            }
+          }
+        ],
+        "contains_finalize": true
+      },
+      "A4_merge_queue": {
+        "api_capture": [
+          {
+            "ruleset_name": "main",
+            "rule_type": "merge_queue",
+            "parameters": {
+              "merge_method": "SQUASH",
+              "max_entries_to_build": 2,
+              "min_entries_to_merge": 1,
+              "max_entries_to_merge": 1,
+              "min_entries_to_merge_wait_minutes": 1,
+              "grouping_strategy": "ALLGREEN",
+              "check_response_timeout_minutes": 60
+            }
+          },
+          {
+            "ruleset_name": "main-protection",
+            "rule_type": "merge_queue",
+            "parameters": {
+              "merge_method": "MERGE",
+              "max_entries_to_build": 5,
+              "min_entries_to_merge": 1,
+              "max_entries_to_merge": 5,
+              "min_entries_to_merge_wait_minutes": 5,
+              "grouping_strategy": "ALLGREEN",
+              "check_response_timeout_minutes": 60
+            }
+          }
+        ],
+        "enabled": true
+      },
+      "A5_merge_group": {
+        "workflow_file": ".github/workflows/docops-gatekit.yml",
+        "contains_merge_group": true,
+        "grep_result": true
+      },
+      "B_manual_attestations": [
+        {
+          "item": "approve_and_run",
+          "description": "Settings > Actions > Fork pull request workflows > Require approval",
+          "method": "MANUAL_ATTESTATION",
+          "screenshot_sha256": "bc6466f8f7e53112e1147c48af3014d09e8a1351359035402754ef158fc291ef",
+          "verified_at": "2026-01-28T14:59:25.130670+00:00",
+          "verified_by": "user_attestation"
+        },
+        {
+          "item": "token_permissions_default",
+          "description": "Settings > Actions > Workflow permissions > Read repository contents",
+          "method": "MANUAL_ATTESTATION",
+          "screenshot_sha256": "01362aebceb60214ace118082e4cc4bedcaf99a55f3bb5c2f7ecad83e56a1ec3",
+          "verified_at": "2026-01-28T14:59:25.130670+00:00",
+          "verified_by": "user_attestation"
+        },
+        {
+          "item": "expected_source",
+          "description": "Org Settings > Actions > Fork pull request workflows from outside collaborators",
+          "method": "MANUAL_ATTESTATION",
+          "screenshot_sha256": "8d029dce01b45713121dcb3f0a81b690f26c6fe39caa5585321ebd10b1cba33f",
+          "verified_at": "2026-01-28T14:59:25.130670+00:00",
+          "verified_by": "user_attestation"
+        }
+      ],
+      "workflow_runs": {
+        "total_count": 5,
+        "recent_runs": [
+          {
+            "id": 21440598566,
+            "event": "merge_group",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-01-28T13:43:35Z"
+          },
+          {
+            "id": 21440575608,
+            "event": "pull_request",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-01-28T13:42:54Z"
+          },
+          {
+            "id": 21440041321,
+            "event": "merge_group",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-01-28T13:26:39Z"
+          },
+          {
+            "id": 21439931167,
+            "event": "pull_request",
+            "status": "completed",
+            "conclusion": "success",
+            "created_at": "2026-01-28T13:23:16Z"
+          },
+          {
+            "id": 21439878520,
+            "event": "pull_request",
+            "status": "completed",
+            "conclusion": "failure",
+            "created_at": "2026-01-28T13:21:41Z"
+          }
+        ]
+      }
+    },
+    "settings_evidence": {
+      "task_id": "tvs-20260128-001",
+      "repo": "Spartoi-development-team/spartoi-project",
+      "captured_at": "2026-01-28T14:09:14.903425+00:00",
+      "rulesets": {
+        "repo_rulesets": [
+          {
+            "id": 12207798,
+            "name": "main",
+            "target": "branch",
+            "source_type": "Repository",
+            "source": "Spartoi-development-team/spartoi-project",
+            "enforcement": "active",
+            "node_id": "RRS_lACqUmVwb3NpdG9yec5ELwI6zgC6RrY",
+            "_links": {
+              "self": {
+                "href": "https://api.github.com/repos/Spartoi-development-team/spartoi-project/rulesets/12207798"
+              },
+              "html": {
+                "href": "https://github.com/Spartoi-development-team/spartoi-project/rules/12207798"
+              }
+            },
+            "created_at": "2026-01-28T05:55:14.523Z",
+            "updated_at": "2026-01-28T05:55:14.575Z"
+          },
+          {
+            "id": 12219645,
+            "name": "main-protection",
+            "target": "branch",
+            "source_type": "Repository",
+            "source": "Spartoi-development-team/spartoi-project",
+            "enforcement": "active",
+            "node_id": "RRS_lACqUmVwb3NpdG9yec5ELwI6zgC6dP0",
+            "_links": {
+              "self": {
+                "href": "https://api.github.com/repos/Spartoi-development-team/spartoi-project/rulesets/12219645"
+              },
+              "html": {
+                "href": "https://github.com/Spartoi-development-team/spartoi-project/rules/12219645"
+              }
+            },
+            "created_at": "2026-01-28T13:11:57.891Z",
+            "updated_at": "2026-01-28T13:11:57.943Z"
+          }
+        ]
+      },
+      "attestations": [],
+      "repo_visibility": "public",
+      "repo_owner_type": "Organization",
+      "workflow_checks": {
+        "merge_group_trigger": true,
+        "workflow_file": ".github/workflows/docops-gatekit.yml"
+      }
+    },
+    "ruleset_12207798_detail": {
+      "id": 12207798,
+      "name": "main",
+      "target": "branch",
+      "source_type": "Repository",
+      "source": "Spartoi-development-team/spartoi-project",
+      "enforcement": "active",
+      "conditions": {
+        "ref_name": {
+          "exclude": [],
+          "include": [
+            "~DEFAULT_BRANCH"
+          ]
+        }
+      },
+      "rules": [
+        {
+          "type": "deletion"
+        },
+        {
+          "type": "non_fast_forward"
+        },
+        {
+          "type": "pull_request",
+          "parameters": {
+            "required_approving_review_count": 0,
+            "dismiss_stale_reviews_on_push": true,
+            "required_reviewers": [],
+            "require_code_owner_review": true,
+            "require_last_push_approval": false,
+            "required_review_thread_resolution": true,
+            "allowed_merge_methods": [
+              "merge",
+              "squash",
+              "rebase"
+            ]
+          }
+        },
+        {
+          "type": "merge_queue",
+          "parameters": {
+            "merge_method": "SQUASH",
+            "max_entries_to_build": 2,
+            "min_entries_to_merge": 1,
+            "max_entries_to_merge": 1,
+            "min_entries_to_merge_wait_minutes": 1,
+            "grouping_strategy": "ALLGREEN",
+            "check_response_timeout_minutes": 60
+          }
+        },
+        {
+          "type": "required_linear_history"
+        }
+      ],
+      "node_id": "RRS_lACqUmVwb3NpdG9yec5ELwI6zgC6RrY",
+      "created_at": "2026-01-28T05:55:14.523Z",
+      "updated_at": "2026-01-28T05:55:14.575Z",
+      "bypass_actors": [],
+      "current_user_can_bypass": "never",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/Spartoi-development-team/spartoi-project/rulesets/12207798"
+        },
+        "html": {
+          "href": "https://github.com/Spartoi-development-team/spartoi-project/rules/12207798"
+        }
+      }
+    },
+    "ruleset_12219645_detail": {
+      "id": 12219645,
+      "name": "main-protection",
+      "target": "branch",
+      "source_type": "Repository",
+      "source": "Spartoi-development-team/spartoi-project",
+      "enforcement": "active",
+      "conditions": {
+        "ref_name": {
+          "exclude": [],
+          "include": [
+            "~DEFAULT_BRANCH"
+          ]
+        }
+      },
+      "rules": [
+        {
+          "type": "deletion"
+        },
+        {
+          "type": "non_fast_forward"
+        },
+        {
+          "type": "pull_request",
+          "parameters": {
+            "required_approving_review_count": 0,
+            "dismiss_stale_reviews_on_push": false,
+            "required_reviewers": [],
+            "require_code_owner_review": false,
+            "require_last_push_approval": false,
+            "required_review_thread_resolution": false,
+            "allowed_merge_methods": [
+              "merge",
+              "squash",
+              "rebase"
+            ]
+          }
+        },
+        {
+          "type": "required_status_checks",
+          "parameters": {
+            "strict_required_status_checks_policy": false,
+            "do_not_enforce_on_create": false,
+            "required_status_checks": [
+              {
+                "context": "docops-gatekit/finalize"
+              }
+            ]
+          }
+        },
+        {
+          "type": "merge_queue",
+          "parameters": {
+            "merge_method": "MERGE",
+            "max_entries_to_build": 5,
+            "min_entries_to_merge": 1,
+            "max_entries_to_merge": 5,
+            "min_entries_to_merge_wait_minutes": 5,
+            "grouping_strategy": "ALLGREEN",
+            "check_response_timeout_minutes": 60
+          }
+        }
+      ],
+      "node_id": "RRS_lACqUmVwb3NpdG9yec5ELwI6zgC6dP0",
+      "created_at": "2026-01-28T13:11:57.891Z",
+      "updated_at": "2026-01-28T13:11:57.943Z",
+      "bypass_actors": [],
+      "current_user_can_bypass": "never",
+      "_links": {
+        "self": {
+          "href": "https://api.github.com/repos/Spartoi-development-team/spartoi-project/rulesets/12219645"
+        },
+        "html": {
+          "href": "https://github.com/Spartoi-development-team/spartoi-project/rules/12219645"
+        }
+      }
+    },
+    "rulesets_list": [
+      {
+        "id": 12207798,
+        "name": "main",
+        "target": "branch",
+        "source_type": "Repository",
+        "source": "Spartoi-development-team/spartoi-project",
+        "enforcement": "active",
+        "node_id": "RRS_lACqUmVwb3NpdG9yec5ELwI6zgC6RrY",
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/Spartoi-development-team/spartoi-project/rulesets/12207798"
+          },
+          "html": {
+            "href": "https://github.com/Spartoi-development-team/spartoi-project/rules/12207798"
+          }
+        },
+        "created_at": "2026-01-28T05:55:14.523Z",
+        "updated_at": "2026-01-28T05:55:14.575Z"
+      },
+      {
+        "id": 12219645,
+        "name": "main-protection",
+        "target": "branch",
+        "source_type": "Repository",
+        "source": "Spartoi-development-team/spartoi-project",
+        "enforcement": "active",
+        "node_id": "RRS_lACqUmVwb3NpdG9yec5ELwI6zgC6dP0",
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/Spartoi-development-team/spartoi-project/rulesets/12219645"
+          },
+          "html": {
+            "href": "https://github.com/Spartoi-development-team/spartoi-project/rules/12219645"
+          }
+        },
+        "created_at": "2026-01-28T13:11:57.891Z",
+        "updated_at": "2026-01-28T13:11:57.943Z"
+      }
+    ]
   },
   "B_execution_plane": {
+    "verdict": {
+      "task_id": "tvs-20260128-001",
+      "status": "PASS",
+      "judges": [
+        {
+          "id": "judge_a",
+          "status": "PASS",
+          "reason": "gate_report must PASS"
+        },
+        {
+          "id": "judge_b",
+          "status": "PASS",
+          "reason": "check name must be OK"
+        }
+      ],
+      "created_at": "2026-01-28T14:59:31.399323+00:00"
+    },
     "input_manifest": {
       "task_id": "tvs-20260128-001",
       "created_at": "2026-01-28T13:22:44.490899+00:00",
@@ -1384,18 +1961,6 @@
           "sha256": "7e9a5306340a723e835fce73e4382b4537b3ea8e5d5c40a49bc10bf353be48db"
         }
       ]
-    },
-    "run_manifest": {
-      "task_id": "tvs-20260128-001",
-      "runner": {
-        "env": "codespaces",
-        "python": "Python 3.11.14"
-      },
-      "git": {
-        "branch": "tvs/tvs-20260128-001",
-        "commit": "85c9d9120c884d6e34f0aba119e33a17bf2968a9"
-      },
-      "created_at": "2026-01-28T13:22:49.344193+00:00"
     },
     "gate_report": {
       "task_id": "tvs-20260128-001",
@@ -1436,26 +2001,97 @@
         "status": "PASS"
       }
     },
-    "verdict": {
+    "run_manifest": {
       "task_id": "tvs-20260128-001",
-      "status": "PASS",
-      "judges": [
+      "runner": {
+        "env": "codespaces",
+        "python": "Python 3.11.14"
+      },
+      "git": {
+        "branch": "tvs/tvs-20260128-001",
+        "commit": "85c9d9120c884d6e34f0aba119e33a17bf2968a9"
+      },
+      "created_at": "2026-01-28T13:22:49.344193+00:00"
+    },
+    "gate_report_v2": {
+      "task_id": "tvs-20260128-001",
+      "schema_version": "tvs-v0.4.1-§9",
+      "created_at": "2026-01-28T14:59:31.396616+00:00",
+      "gates": [
         {
-          "id": "judge_a",
+          "id": "g0_input_seal",
           "status": "PASS",
-          "reason": "gate_report must PASS"
+          "evidence": [
+            "input_manifest.json"
+          ]
         },
         {
-          "id": "judge_b",
+          "id": "g0_merge_group_check",
           "status": "PASS",
-          "reason": "check name must be OK"
+          "evidence": [
+            "PASS: docops-gatekit.yml contains merge_group trigger",
+            "PASS: docops-gatekit.yml contains docops-gatekit/finalize job",
+            "INFO: docops-gatekit.yml triggers on pull_request",
+            "INFO: docops-gatekit.yml triggers on merge_group"
+          ]
+        },
+        {
+          "id": "g_finalize_check",
+          "status": "PASS",
+          "evidence": [
+            "PASS: Workflow contains job name 'docops-gatekit/finalize'",
+            "PASS: settings_evidence confirms finalize in required_status_checks"
+          ]
+        },
+        {
+          "id": "g3_schema",
+          "status": "PASS",
+          "evidence": [
+            "input_manifest.json",
+            "run_manifest.json",
+            "settings_evidence.json"
+          ]
+        },
+        {
+          "id": "g3_anti_platform",
+          "status": "PASS",
+          "evidence": [
+            "scanned"
+          ]
+        },
+        {
+          "id": "g4_dual_judge",
+          "status": "PASS",
+          "evidence": [
+            "verdict.json"
+          ]
         }
       ],
-      "created_at": "2026-01-28T13:22:49.939411+00:00"
-    },
-    "check_name_consistency": "OK: required check = docops-gatekit/finalize\n"
+      "summary": {
+        "status": "PASS",
+        "gates_total": 6,
+        "gates_passed": 6
+      }
+    }
   },
   "C_dual_judge": {
+    "final_aggregate_verdict": {
+      "task_id": "tvs-20260128-001",
+      "aggregator": "judge_aggregate.py (deterministic)",
+      "judge_a": {
+        "id": "judge_a_codex",
+        "verdict": "PASS",
+        "timestamp": "2026-01-28T13:35:42.820207Z"
+      },
+      "judge_b": {
+        "id": "judge_b_claude",
+        "verdict": "PASS",
+        "timestamp": "2026-01-28T13:31:00Z"
+      },
+      "final_verdict": "PASS",
+      "action": "進入 Merge Queue ✅",
+      "aggregated_at": "2026-01-28T13:45:59.539261+00:00"
+    },
     "judge_a_verdict": {
       "judge_id": "judge_a_codex",
       "task_id": "tvs-20260128-001",
@@ -1493,570 +2129,184 @@
       "final_verdict": "PASS",
       "reason": "All 6 semantic checks passed. Evidence pack is internally consistent (task_id, timestamps, verdict-gate logic). No drift markers detected. Phase 0 profile configuration is correct. Registry semantics align with workflow. End-to-end logic chain from evidence to merge is complete and verified.",
       "timestamp": "2026-01-28T13:31:00Z"
-    },
-    "final_aggregate_verdict": {
-      "task_id": "tvs-20260128-001",
-      "aggregator": "judge_aggregate.py (deterministic)",
-      "judge_a": {
-        "id": "judge_a_codex",
-        "verdict": "PASS",
-        "timestamp": "2026-01-28T13:35:42.820207Z"
-      },
-      "judge_b": {
-        "id": "judge_b_claude",
-        "verdict": "PASS",
-        "timestamp": "2026-01-28T13:31:00Z"
-      },
-      "final_verdict": "PASS",
-      "action": "進入 Merge Queue ✅",
-      "aggregated_at": "2026-01-28T13:45:59.539261+00:00"
     }
   },
   "D_workflow": {
     "docops-gatekit.yml": "name: docops-gatekit\n\non:\n  pull_request:\n  merge_group:\n\npermissions:\n  contents: read\n\njobs:\n  finalize:\n    name: docops-gatekit/finalize\n    runs-on: ubuntu-latest\n    steps:\n      - name: Checkout\n        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29\n\n      - name: Setup Python\n        uses: actions/setup-python@f677139bbe7f9c59b41e40162b753c062f5d49a3\n        with:\n          python-version: \"3.11\"\n\n      - name: Install deps\n        run: pip install jsonschema pyyaml\n\n      - name: Detect TASK_ID\n        id: tid\n        run: |\n          TID=\"$(ls -1 docops/evidence | grep -v '^\\.' | sort | tail -n 1)\"\n          echo \"TASK_ID=$TID\" >> $GITHUB_ENV\n          echo \"Detected: $TID\"\n\n      - name: Run GateKit\n        run: python docops/scripts/run_gatekit.py \"$TASK_ID\"\n\n      - name: TVS Verify\n        run: ./docops/scripts/tvs_verify.sh \"$TASK_ID\"\n\n      - name: Upload Evidence\n        uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882\n        with:\n          name: evidence-${{ env.TASK_ID }}\n          path: docops/evidence/${{ env.TASK_ID }}\n"
   },
-  "E_rd01_phase0": {
-    "profiles_evidence": {
-      "evidence_id": "RD01-PROFILES-001",
-      "requirement": "RD-01 Phase 0: 只啟用 Vibe + Dev Lane; Spec/Ops disabled",
-      "captured_at": "2026-01-28T15:46:50.931729+00:00",
-      "profiles": {
-        "dev": {
-          "file": "profiles/dev.yaml",
-          "content": {
-            "id": "dev",
-            "enabled": true,
-            "merge_allowed": true
-          },
-          "enabled": true
-        },
-        "vibe": {
-          "file": "profiles/vibe.yaml",
-          "content": {
-            "id": "vibe",
-            "enabled": true,
-            "merge_allowed": false
-          },
-          "enabled": true
-        },
-        "ops": {
-          "file": "profiles/ops.yaml",
-          "content": {
-            "id": "ops",
-            "enabled": false
-          },
-          "enabled": false
-        },
-        "spec": {
-          "file": "profiles/spec.yaml",
-          "content": {
-            "id": "spec",
-            "enabled": false
-          },
-          "enabled": false
-        }
-      },
-      "validation": {
-        "vibe_enabled": true,
-        "dev_enabled": true,
-        "spec_disabled": true,
-        "ops_disabled": true
-      },
-      "phase0_compliant": true,
-      "verdict": "PASS"
-    },
-    "vibe_block_evidence": {
-      "evidence_id": "RD01-VIBE-BLOCK-001",
-      "requirement": "GV-04: Vibe PR 禁 auto-merge、禁進 merge queue，只能 promotion",
-      "captured_at": "2026-01-28T15:47:28.425780+00:00",
-      "rule_file": "docops/registry/rules/vibe_merge_block.yaml",
-      "rule_content": {
-        "rule_id": "VIBE-MERGE-BLOCK-001",
-        "version": "1.0.0",
-        "description": "Vibe Lane PR 禁止進入 Merge Queue，只能 Promote",
-        "source": "[需求書 v1.1 GV-04] Vibe PR 禁 auto-merge、禁進 merge queue，只能 promotion",
-        "triggers": [
-          {
-            "event": "pull_request",
-            "conditions": [
-              {
-                "label_contains": "[VIBE]"
-              },
-              {
-                "branch_prefix": "vibe/"
-              }
-            ]
-          }
-        ],
-        "actions": {
-          "block_merge_queue": true,
-          "block_auto_merge": true,
-          "allowed_actions": [
-            "promote_to_spec",
-            "close",
-            "request_changes"
-          ]
-        },
-        "enforcement": "STRICT",
-        "fail_action": "BLOCK"
-      },
-      "test_cases": [
+  "E_section9_verdict": {
+    "tvs_section9_verdict": {
+      "task_id": "tvs-20260128-001",
+      "tvs_version": "v0.4.1",
+      "section": "§9 Acceptance Criteria",
+      "verified_at": "2026-01-28T14:59:35.501542+00:00",
+      "checks": [
         {
-          "test_id": "TC-VIBE-001",
-          "description": "Vibe PR with [VIBE] label should be blocked from merge queue",
-          "input": {
-            "label": "[VIBE]",
-            "branch": "vibe/feature-x"
-          },
-          "expected": {
-            "merge_queue_allowed": false,
-            "auto_merge_allowed": false
-          },
-          "actual": {
-            "merge_queue_allowed": false,
-            "auto_merge_allowed": false
-          },
-          "verdict": "PASS"
+          "check": "A1: Repo Org-owned Public",
+          "status": "PASS",
+          "detail": "Org=Organization, Visibility=public"
         },
         {
-          "test_id": "TC-VIBE-002",
-          "description": "Vibe PR should only allow promote action",
-          "input": {
-            "action": "promote_to_spec"
-          },
-          "expected": {
-            "allowed": true
-          },
-          "actual": {
-            "allowed": true
-          },
-          "verdict": "PASS"
+          "check": "A2: Ruleset exists",
+          "status": "PASS",
+          "detail": "Rulesets: ['main', 'main-protection']"
+        },
+        {
+          "check": "A3: Required checks contain finalize",
+          "status": "PASS",
+          "detail": "finalize in contexts: ['docops-gatekit/finalize']"
+        },
+        {
+          "check": "A4: Merge Queue enabled",
+          "status": "PASS",
+          "detail": "Merge Queue enabled via ruleset"
+        },
+        {
+          "check": "A5: Workflow contains merge_group",
+          "status": "PASS",
+          "detail": "merge_group in .github/workflows/docops-gatekit.yml"
+        },
+        {
+          "check": "B: Manual attestations",
+          "status": "PASS",
+          "detail": "All 3 attestations have SHA256"
+        },
+        {
+          "check": "Gate Report (v2)",
+          "status": "PASS",
+          "detail": "All 6 gates PASS"
+        },
+        {
+          "check": "Verdict",
+          "status": "PASS",
+          "detail": "Verdict PASS, judges: [('judge_a', 'PASS'), ('judge_b', 'PASS')]"
         }
       ],
-      "enforcement_evidence": {
-        "enforcement_level": "STRICT",
-        "fail_action": "BLOCK",
-        "is_strict": true
-      },
-      "verdict": "PASS"
-    },
-    "router_evidence": {
-      "evidence_id": "RD01-ROUTER-001",
-      "requirement": "RD-01: 敏感路徑命中 → 不能走 Vibe, 必須走 Dev + 機械 Gate",
-      "captured_at": "2026-01-28T15:48:09.619367+00:00",
-      "rule_file": "docops/registry/rules/lane_router.yaml",
-      "sensitive_paths": [
-        {
-          "pattern": "docops/registry/**",
-          "description": "Registry 變更",
-          "required_lane": "dev",
-          "block_vibe": true
-        },
-        {
-          "pattern": "docops/schemas/**",
-          "description": "Schema 變更",
-          "required_lane": "dev",
-          "block_vibe": true
-        },
-        {
-          "pattern": ".github/workflows/**",
-          "description": "Workflow 變更",
-          "required_lane": "dev",
-          "block_vibe": true
-        },
-        {
-          "pattern": "CLAUDE.md",
-          "description": "Constitution 變更",
-          "required_lane": "dev",
-          "block_vibe": true
-        }
-      ],
-      "lane_matrix": {
-        "vibe": {
-          "allowed_paths": [
-            "docs/**",
-            "README.md",
-            "*.md"
-          ],
-          "blocked_paths": "see sensitive_paths",
-          "tier": 0,
-          "merge_allowed": false
-        },
-        "dev": {
-          "allowed_paths": [
-            "**/*"
-          ],
-          "required_gates": [
-            "g0_input_seal",
-            "g0_merge_group_check",
-            "g_finalize_check",
-            "g3_schema",
-            "g3_anti_platform",
-            "g4_dual_judge"
-          ],
-          "tier": 1,
-          "merge_allowed": true
-        }
-      },
-      "test_cases": [
-        {
-          "test_id": "TC-ROUTER-001",
-          "description": "Registry 變更應路由到 Dev Lane",
-          "input": {
-            "changed_file": "docops/registry/gatekit.yaml"
-          },
-          "expected": {
-            "lane": "dev",
-            "vibe_blocked": true
-          },
-          "verdict": "PASS"
-        },
-        {
-          "test_id": "TC-ROUTER-002",
-          "description": "Schema 變更應路由到 Dev Lane",
-          "input": {
-            "changed_file": "docops/schemas/verdict.schema.json"
-          },
-          "expected": {
-            "lane": "dev",
-            "vibe_blocked": true
-          },
-          "verdict": "PASS"
-        },
-        {
-          "test_id": "TC-ROUTER-003",
-          "description": "Workflow 變更應路由到 Dev Lane",
-          "input": {
-            "changed_file": ".github/workflows/docops-gatekit.yml"
-          },
-          "expected": {
-            "lane": "dev",
-            "vibe_blocked": true
-          },
-          "verdict": "PASS"
-        },
-        {
-          "test_id": "TC-ROUTER-004",
-          "description": "純文檔變更可走 Vibe Lane (但不能 merge)",
-          "input": {
-            "changed_file": "docs/guide.md"
-          },
-          "expected": {
-            "lane": "vibe",
-            "merge_allowed": false
-          },
-          "verdict": "PASS"
-        },
-        {
-          "test_id": "TC-ROUTER-005",
-          "description": "Dev Lane 必須經過所有 required gates",
-          "input": {
-            "lane": "dev"
-          },
-          "expected": {
-            "required_gates": [
-              "g0_input_seal",
-              "g0_merge_group_check",
-              "g_finalize_check",
-              "g3_schema",
-              "g3_anti_platform",
-              "g4_dual_judge"
-            ]
-          },
-          "actual": {
-            "required_gates": [
-              "g0_input_seal",
-              "g0_merge_group_check",
-              "g_finalize_check",
-              "g3_schema",
-              "g3_anti_platform",
-              "g4_dual_judge"
-            ]
-          },
-          "verdict": "PASS"
-        }
-      ],
-      "verdict": "PASS"
-    },
-    "final_report": {
-      "report_id": "RD01-FINAL-REPORT",
-      "requirement": "需求書 v1.1 RD-01: Phase 0 (Core + 2 Lanes)",
-      "generated_at": "2026-01-28T15:48:30.923588+00:00",
-      "evidence_files": [
-        "rd01_profiles_evidence.json",
-        "rd01_vibe_block_evidence.json",
-        "rd01_router_evidence.json"
-      ],
-      "verification_results": {
-        "RD01-1_Profiles": {
-          "requirement": "Phase 0 只啟用 Vibe + Dev; Spec/Ops disabled",
-          "evidence_id": "RD01-PROFILES-001",
-          "verdict": "PASS",
-          "details": {
-            "vibe_enabled": true,
-            "dev_enabled": true,
-            "spec_disabled": true,
-            "ops_disabled": true
-          }
-        },
-        "RD01-2_Vibe_Block": {
-          "requirement": "GV-04: Vibe PR 禁止 merge queue / auto-merge",
-          "evidence_id": "RD01-VIBE-BLOCK-001",
-          "verdict": "PASS",
-          "test_cases_passed": 2,
-          "test_cases_total": 2
-        },
-        "RD01-3_Router": {
-          "requirement": "敏感路徑 → Dev Lane + 機械 Gate",
-          "evidence_id": "RD01-ROUTER-001",
-          "verdict": "PASS",
-          "sensitive_paths_defined": 4,
-          "test_cases_passed": 5,
-          "test_cases_total": 5
-        }
-      },
       "summary": {
-        "total_checks": 3,
-        "passed": 3,
-        "failed": 0
-      },
-      "final_verdict": "PASS"
-    }
-  },
-  "F_rules": {
-    "vibe_merge_block.yaml": {
-      "rule_id": "VIBE-MERGE-BLOCK-001",
-      "version": "1.0.0",
-      "description": "Vibe Lane PR 禁止進入 Merge Queue，只能 Promote",
-      "source": "[需求書 v1.1 GV-04] Vibe PR 禁 auto-merge、禁進 merge queue，只能 promotion",
-      "triggers": [
-        {
-          "event": "pull_request",
-          "conditions": [
-            {
-              "label_contains": "[VIBE]"
-            },
-            {
-              "branch_prefix": "vibe/"
-            }
-          ]
-        }
-      ],
-      "actions": {
-        "block_merge_queue": true,
-        "block_auto_merge": true,
-        "allowed_actions": [
-          "promote_to_spec",
-          "close",
-          "request_changes"
-        ]
-      },
-      "enforcement": "STRICT",
-      "fail_action": "BLOCK"
-    },
-    "lane_router.yaml": {
-      "rule_id": "LANE-ROUTER-001",
-      "version": "1.0.0",
-      "description": "根據變更類型自動路由到適當的 Lane",
-      "source": "[需求書 v1.1 RD-01] Phase 0 Core + 2 lanes",
-      "sensitive_paths": [
-        {
-          "pattern": "docops/registry/**",
-          "description": "Registry 變更",
-          "required_lane": "dev",
-          "block_vibe": true
-        },
-        {
-          "pattern": "docops/schemas/**",
-          "description": "Schema 變更",
-          "required_lane": "dev",
-          "block_vibe": true
-        },
-        {
-          "pattern": ".github/workflows/**",
-          "description": "Workflow 變更",
-          "required_lane": "dev",
-          "block_vibe": true
-        },
-        {
-          "pattern": "CLAUDE.md",
-          "description": "Constitution 變更",
-          "required_lane": "dev",
-          "block_vibe": true
-        }
-      ],
-      "lane_matrix": {
-        "vibe": {
-          "allowed_paths": [
-            "docs/**",
-            "README.md",
-            "*.md"
-          ],
-          "blocked_paths": "see sensitive_paths",
-          "tier": 0,
-          "merge_allowed": false
-        },
-        "dev": {
-          "allowed_paths": [
-            "**/*"
-          ],
-          "required_gates": [
-            "g0_input_seal",
-            "g0_merge_group_check",
-            "g_finalize_check",
-            "g3_schema",
-            "g3_anti_platform",
-            "g4_dual_judge"
-          ],
-          "tier": 1,
-          "merge_allowed": true
-        }
-      },
-      "routing_logic": [
-        {
-          "condition": "changes_contain_sensitive_path",
-          "action": "route_to_dev",
-          "block_vibe": true
-        },
-        {
-          "condition": "label_is_vibe",
-          "action": "route_to_vibe",
-          "validate": "no_sensitive_paths"
-        },
-        {
-          "condition": "default",
-          "action": "route_to_dev"
-        }
-      ]
+        "passed": 8,
+        "total": 8,
+        "final_verdict": "PASS"
+      }
     }
   },
   "evidence_index": {
-    "task_id": "tvs-20260128-001",
-    "created_at": "2026-01-28T14:09:32.373062+00:00",
-    "tvs_version": "v0.4.1",
-    "evidence_files": {
-      "A_control_plane": {
-        "repo_info.json": {
-          "status": "PRESENT",
-          "size_bytes": 7691,
-          "sha256": "3f88345f910e32d7d9b5a3a2f7bad1e7666ab7ead300c7b678afbcc94205be44"
-        },
-        "settings_evidence.json": {
-          "status": "PRESENT",
-          "size_bytes": 1783,
-          "sha256": "49558eb1e37225177192f688b14ac581b7bbb495acc0647256d570d86fabf76f"
-        },
-        "rulesets_detail.json": {
-          "status": "PRESENT",
-          "size_bytes": 988,
-          "sha256": "afb320a4ec8894d96906c5b1786f96498c5322267bda8bb58e5cf6619222ce72"
-        },
-        "branch_protection.json": {
-          "status": "PRESENT",
-          "size_bytes": 3,
-          "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
-        },
-        "workflow_runs.json": {
-          "status": "PRESENT",
-          "size_bytes": 72377,
-          "sha256": "6abca8b731d8971ca1d9cbba19d01ec81068b5aaf5371f2a5ba4eaa7407b7dc0"
-        }
+    "total_files": 23,
+    "files": [
+      {
+        "name": "audit_report.md",
+        "size_bytes": 2421,
+        "sha256": "afa482f6a4bce5c7b84ce9b909f4e2af5cd247ac1f50f86a7cb96c86801afb7f"
       },
-      "B_execution_plane": {
-        "input_manifest.json": {
-          "status": "PRESENT",
-          "size_bytes": 252,
-          "sha256": "c9fca830eacc41bde56c89a633128c9aea157c0ff8fba7fa606c28da51d0f14b"
-        },
-        "run_manifest.json": {
-          "status": "PRESENT",
-          "size_bytes": 273,
-          "sha256": "9d612a1ef58023bfa837f19e2c1054c6d2cfae2a22ab165b283f684f91c45808"
-        },
-        "gate_report.json": {
-          "status": "PRESENT",
-          "size_bytes": 684,
-          "sha256": "5f153ba6d96034249516a42dac63f2b10bbf315a403177596a61d5f115942382"
-        },
-        "verdict.json": {
-          "status": "PRESENT",
-          "size_bytes": 325,
-          "sha256": "3ca1c78c913ad3ae973700cc2cc1e356ba335473564a30a06770720b75adcc66"
-        },
-        "check_name_consistency.txt": {
-          "status": "PRESENT",
-          "size_bytes": 45,
-          "sha256": "c5e0e9cb25438a34af8f6b65ec285bc19a16210dcee9db45a5a94f4eb6e45d60"
-        }
+      {
+        "name": "branch_protection.json",
+        "size_bytes": 3,
+        "sha256": "ca3d163bab055381827226140568f3bef7eaac187cebd76878e0b63e9e442356"
       },
-      "C_dual_judge": {
-        "judge_a_verdict.json": {
-          "status": "PRESENT",
-          "size_bytes": 480,
-          "sha256": "20018cd074e98dff47992f85a793001def2e6640766a3bbe22f5ee4ba0d53cb1"
-        },
-        "judge_b_verdict.json": {
-          "status": "PRESENT",
-          "size_bytes": 1873,
-          "sha256": "408a1df33ff557e04895d68647428ce45b7d5fa856c476449b619f7004e74071"
-        },
-        "final_aggregate_verdict.json": {
-          "status": "PRESENT",
-          "size_bytes": 437,
-          "sha256": "c2c2ea3d14fc7e4886e118483c9c183a8099eb8ce39d3e4e038514649741de74"
-        }
+      {
+        "name": "check_name_consistency.txt",
+        "size_bytes": 80,
+        "sha256": "ab299e924bd3415789031d405030e256558c8c4dd55f71cab36dda11de2e2038"
       },
-      "D_workflow": {
-        "docops-gatekit.yml.evidence": {
-          "status": "PRESENT",
-          "size_bytes": 1098,
-          "sha256": "273fc8bff77aafbceb42fba12b43f68e46af98385b7bad927b032d43346a1b27"
-        }
+      {
+        "name": "docops-gatekit.yml.evidence",
+        "size_bytes": 1098,
+        "sha256": "273fc8bff77aafbceb42fba12b43f68e46af98385b7bad927b032d43346a1b27"
       },
-      "E_rd01_phase0": {
-        "rd01_final_report.json": {
-          "status": "PRESENT",
-          "size_bytes": 1227,
-          "sha256": "b0c86e287687d4aa39e6d77e5104eaa60f3644074842ca2efee2cc746896b4eb"
-        },
-        "rd01_profiles_evidence.json": {
-          "status": "PRESENT",
-          "size_bytes": 1041,
-          "sha256": "60c66dda99d785a2bc4f28f48a19e28984b1bec7434878c007a265a935f0211c"
-        },
-        "rd01_router_evidence.json": {
-          "status": "PRESENT",
-          "size_bytes": 3273,
-          "sha256": "49ac3f33844f8ee4a5545355613db018317a39a4482e9aca065df73832ab7a2d"
-        },
-        "rd01_vibe_block_evidence.json": {
-          "status": "PRESENT",
-          "size_bytes": 1905,
-          "sha256": "f46e6ad28c335fd40cf567fcc3b14f911d5ae26a0d0c557c48ba979048ee8300"
-        }
+      {
+        "name": "evidence_index.json",
+        "size_bytes": 2851,
+        "sha256": "91324541b77fb8970b48491a02f86a438f0ee0e4296562cd4ed7e4a68df76ca2"
       },
-      "F_rules_and_gates": {
-        "vibe_merge_block.yaml": {
-          "status": "PRESENT",
-          "path": "docops/registry/rules/vibe_merge_block.yaml"
-        },
-        "lane_router.yaml": {
-          "status": "PRESENT",
-          "path": "docops/registry/rules/lane_router.yaml"
-        },
-        "g_vibe_merge_block.py": {
-          "status": "PRESENT",
-          "path": "docops/registry/gates/g_vibe_merge_block.py"
-        },
-        "g_lane_router.py": {
-          "status": "PRESENT",
-          "path": "docops/registry/gates/g_lane_router.py"
-        }
+      {
+        "name": "final_aggregate_verdict.json",
+        "size_bytes": 437,
+        "sha256": "c2c2ea3d14fc7e4886e118483c9c183a8099eb8ce39d3e4e038514649741de74"
+      },
+      {
+        "name": "gate_report.json",
+        "size_bytes": 684,
+        "sha256": "5f153ba6d96034249516a42dac63f2b10bbf315a403177596a61d5f115942382"
+      },
+      {
+        "name": "gate_report_v2.json",
+        "size_bytes": 1375,
+        "sha256": "460dfd45ffd9af37e4db501e5a6b46f9fa6a77040f1efcc0c9b2867c0b7054a7"
+      },
+      {
+        "name": "input_manifest.json",
+        "size_bytes": 252,
+        "sha256": "c9fca830eacc41bde56c89a633128c9aea157c0ff8fba7fa606c28da51d0f14b"
+      },
+      {
+        "name": "judge_a_verdict.json",
+        "size_bytes": 480,
+        "sha256": "20018cd074e98dff47992f85a793001def2e6640766a3bbe22f5ee4ba0d53cb1"
+      },
+      {
+        "name": "judge_b_verdict.json",
+        "size_bytes": 1873,
+        "sha256": "408a1df33ff557e04895d68647428ce45b7d5fa856c476449b619f7004e74071"
+      },
+      {
+        "name": "repo_info.json",
+        "size_bytes": 7691,
+        "sha256": "3f88345f910e32d7d9b5a3a2f7bad1e7666ab7ead300c7b678afbcc94205be44"
+      },
+      {
+        "name": "ruleset_12207798_detail.json",
+        "size_bytes": 1243,
+        "sha256": "cea232ed79779e77f8a0d654486fe1a0463a702eee8ffc39a19b9f754797e882"
+      },
+      {
+        "name": "ruleset_12219645_detail.json",
+        "size_bytes": 1413,
+        "sha256": "e69961bc4ad620861302011e2567bfd7504b6fc13d77c20bc7d67be8df11da23"
+      },
+      {
+        "name": "rulesets_detail.json",
+        "size_bytes": 988,
+        "sha256": "afb320a4ec8894d96906c5b1786f96498c5322267bda8bb58e5cf6619222ce72"
+      },
+      {
+        "name": "rulesets_full_detail.json",
+        "size_bytes": 3940,
+        "sha256": "5e035a261b352e2df78b66bf0b038a01b733e09242d0479cb4aae32b3fa98ae3"
+      },
+      {
+        "name": "rulesets_list.json",
+        "size_bytes": 989,
+        "sha256": "67f5717e889d91da6dc06c364260958ad4a9f94db8cfede2b79a63890a5a97bc"
+      },
+      {
+        "name": "run_manifest.json",
+        "size_bytes": 273,
+        "sha256": "9d612a1ef58023bfa837f19e2c1054c6d2cfae2a22ab165b283f684f91c45808"
+      },
+      {
+        "name": "settings_evidence.json",
+        "size_bytes": 1783,
+        "sha256": "49558eb1e37225177192f688b14ac581b7bbb495acc0647256d570d86fabf76f"
+      },
+      {
+        "name": "settings_evidence_v2.json",
+        "size_bytes": 4125,
+        "sha256": "0393d8fc722de025e7ea458e08f763d243d2b690ee5776e21b0429dbe549f8ae"
+      },
+      {
+        "name": "tvs_section9_verdict.json",
+        "size_bytes": 1347,
+        "sha256": "e6b6c1b8d200925274b6c5ec4085fbc5c15594c188277f592b8c09a92fc3ac40"
+      },
+      {
+        "name": "verdict.json",
+        "size_bytes": 325,
+        "sha256": "d6212c53e6d9935b82a98088975cdbba17e66f907580ef845287707f6413adc7"
+      },
+      {
+        "name": "workflow_runs.json",
+        "size_bytes": 72377,
+        "sha256": "6abca8b731d8971ca1d9cbba19d01ec81068b5aaf5371f2a5ba4eaa7407b7dc0"
       }
-    },
-    "complete": true,
-    "verdict": "PASS",
-    "updated_at": "2026-01-28T15:55:54.488700+00:00",
-    "includes_rd01": true
+    ]
   }
 }

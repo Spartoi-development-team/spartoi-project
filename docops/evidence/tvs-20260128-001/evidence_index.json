@@ -80,8 +80,50 @@
         "size_bytes": 1098,
         "sha256": "273fc8bff77aafbceb42fba12b43f68e46af98385b7bad927b032d43346a1b27"
       }
+    },
+    "E_rd01_phase0": {
+      "rd01_final_report.json": {
+        "status": "PRESENT",
+        "size_bytes": 1227,
+        "sha256": "b0c86e287687d4aa39e6d77e5104eaa60f3644074842ca2efee2cc746896b4eb"
+      },
+      "rd01_profiles_evidence.json": {
+        "status": "PRESENT",
+        "size_bytes": 1041,
+        "sha256": "60c66dda99d785a2bc4f28f48a19e28984b1bec7434878c007a265a935f0211c"
+      },
+      "rd01_router_evidence.json": {
+        "status": "PRESENT",
+        "size_bytes": 3273,
+        "sha256": "49ac3f33844f8ee4a5545355613db018317a39a4482e9aca065df73832ab7a2d"
+      },
+      "rd01_vibe_block_evidence.json": {
+        "status": "PRESENT",
+        "size_bytes": 1905,
+        "sha256": "f46e6ad28c335fd40cf567fcc3b14f911d5ae26a0d0c557c48ba979048ee8300"
+      }
+    },
+    "F_rules_and_gates": {
+      "vibe_merge_block.yaml": {
+        "status": "PRESENT",
+        "path": "docops/registry/rules/vibe_merge_block.yaml"
+      },
+      "lane_router.yaml": {
+        "status": "PRESENT",
+        "path": "docops/registry/rules/lane_router.yaml"
+      },
+      "g_vibe_merge_block.py": {
+        "status": "PRESENT",
+        "path": "docops/registry/gates/g_vibe_merge_block.py"
+      },
+      "g_lane_router.py": {
+        "status": "PRESENT",
+        "path": "docops/registry/gates/g_lane_router.py"
+      }
     }
   },
   "complete": true,
-  "verdict": "PASS"
+  "verdict": "PASS",
+  "updated_at": "2026-01-28T15:55:54.488700+00:00",
+  "includes_rd01": true
 }

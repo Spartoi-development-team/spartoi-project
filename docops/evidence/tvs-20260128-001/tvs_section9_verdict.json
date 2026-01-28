@@ -43,11 +43,28 @@
       "check": "Verdict",
       "status": "PASS",
       "detail": "Verdict PASS, judges: [('judge_a', 'PASS'), ('judge_b', 'PASS')]"
+    },
+    {
+      "check": "RD01-1: Profiles Phase 0 Config",
+      "status": "PASS",
+      "detail": "vibe=true, dev=true, spec=false, ops=false"
+    },
+    {
+      "check": "RD01-2: Vibe Lane Merge Block (GV-04)",
+      "status": "PASS",
+      "detail": "2/2 test cases passed"
+    },
+    {
+      "check": "RD01-3: Lane Router (Sensitive Paths)",
+      "status": "PASS",
+      "detail": "4 sensitive paths, 5/5 test cases passed"
     }
   ],
   "summary": {
-    "passed": 8,
-    "total": 8,
+    "passed": 11,
+    "total": 11,
     "final_verdict": "PASS"
-  }
+  },
+  "updated_at": "2026-01-28T15:55:54.489680+00:00",
+  "includes_rd01": true
 }
