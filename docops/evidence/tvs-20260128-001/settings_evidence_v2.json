@@ -1,0 +1,141 @@
+{
+  "task_id": "tvs-20260128-001",
+  "schema_version": "tvs-v0.4.1-§8.3",
+  "captured_at": "2026-01-28T14:42:33.291500+00:00",
+  "A1_repo": {
+    "full_name": "Spartoi-development-team/spartoi-project",
+    "visibility": "public",
+    "owner_type": "Organization",
+    "is_org_owned_public": true
+  },
+  "A2_ruleset_exists": {
+    "count": 2,
+    "names": [
+      "main",
+      "main-protection"
+    ],
+    "exists": true
+  },
+  "A3_required_status_checks": {
+    "api_capture": [
+      {
+        "ruleset_name": "main-protection",
+        "contexts": [
+          "docops-gatekit/finalize"
+        ],
+        "raw_parameters": {
+          "strict_required_status_checks_policy": false,
+          "do_not_enforce_on_create": false,
+          "required_status_checks": [
+            {
+              "context": "docops-gatekit/finalize"
+            }
+          ]
+        }
+      }
+    ],
+    "contains_finalize": true
+  },
+  "A4_merge_queue": {
+    "api_capture": [
+      {
+        "ruleset_name": "main",
+        "rule_type": "merge_queue",
+        "parameters": {
+          "merge_method": "SQUASH",
+          "max_entries_to_build": 2,
+          "min_entries_to_merge": 1,
+          "max_entries_to_merge": 1,
+          "min_entries_to_merge_wait_minutes": 1,
+          "grouping_strategy": "ALLGREEN",
+          "check_response_timeout_minutes": 60
+        }
+      },
+      {
+        "ruleset_name": "main-protection",
+        "rule_type": "merge_queue",
+        "parameters": {
+          "merge_method": "MERGE",
+          "max_entries_to_build": 5,
+          "min_entries_to_merge": 1,
+          "max_entries_to_merge": 5,
+          "min_entries_to_merge_wait_minutes": 5,
+          "grouping_strategy": "ALLGREEN",
+          "check_response_timeout_minutes": 60
+        }
+      }
+    ],
+    "enabled": true
+  },
+  "A5_merge_group": {
+    "workflow_file": ".github/workflows/docops-gatekit.yml",
+    "contains_merge_group": true,
+    "grep_result": true
+  },
+  "B_manual_attestations": [
+    {
+      "item": "approve_and_run",
+      "description": "Settings > Actions > Fork pull request workflows > Require approval",
+      "method": "MANUAL_ATTESTATION",
+      "screenshot_sha256": "PENDING_USER_INPUT",
+      "verified_at": null,
+      "note": "需要用戶提供截圖 SHA256"
+    },
+    {
+      "item": "token_permissions_default",
+      "description": "Settings > Actions > Workflow permissions > Read repository contents",
+      "method": "MANUAL_ATTESTATION",
+      "screenshot_sha256": "PENDING_USER_INPUT",
+      "verified_at": null,
+      "note": "需要用戶提供截圖 SHA256"
+    },
+    {
+      "item": "expected_source",
+      "description": "Org Settings > Actions > Fork pull request workflows from outside collaborators",
+      "method": "MANUAL_ATTESTATION",
+      "screenshot_sha256": "PENDING_USER_INPUT",
+      "verified_at": null,
+      "note": "需要用戶提供截圖 SHA256（如適用）"
+    }
+  ],
+  "workflow_runs": {
+    "total_count": 5,
+    "recent_runs": [
+      {
+        "id": 21440598566,
+        "event": "merge_group",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-01-28T13:43:35Z"
+      },
+      {
+        "id": 21440575608,
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-01-28T13:42:54Z"
+      },
+      {
+        "id": 21440041321,
+        "event": "merge_group",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-01-28T13:26:39Z"
+      },
+      {
+        "id": 21439931167,
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "success",
+        "created_at": "2026-01-28T13:23:16Z"
+      },
+      {
+        "id": 21439878520,
+        "event": "pull_request",
+        "status": "completed",
+        "conclusion": "failure",
+        "created_at": "2026-01-28T13:21:41Z"
+      }
+    ]
+  }
+}

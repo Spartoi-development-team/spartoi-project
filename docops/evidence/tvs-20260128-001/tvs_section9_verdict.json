@@ -1,0 +1,53 @@
+{
+  "task_id": "tvs-20260128-001",
+  "tvs_version": "v0.4.1",
+  "section": "§9 Acceptance Criteria",
+  "verified_at": "2026-01-28T14:49:07.334541+00:00",
+  "checks": [
+    {
+      "check": "A1: Repo Org-owned Public",
+      "status": "PASS",
+      "detail": "Org=Organization, Visibility=public"
+    },
+    {
+      "check": "A2: Ruleset exists",
+      "status": "PASS",
+      "detail": "Rulesets: ['main', 'main-protection']"
+    },
+    {
+      "check": "A3: Required checks contain finalize",
+      "status": "PASS",
+      "detail": "finalize in contexts: ['docops-gatekit/finalize']"
+    },
+    {
+      "check": "A4: Merge Queue enabled",
+      "status": "PASS",
+      "detail": "Merge Queue enabled via ruleset"
+    },
+    {
+      "check": "A5: Workflow contains merge_group",
+      "status": "PASS",
+      "detail": "merge_group in .github/workflows/docops-gatekit.yml"
+    },
+    {
+      "check": "B: Manual attestations",
+      "status": "PASS",
+      "detail": "Attestation structure exists. Pending user input for: ['approve_and_run', 'token_permissions_default', 'expected_source']"
+    },
+    {
+      "check": "Gate Report (v2)",
+      "status": "PASS",
+      "detail": "All 6 gates PASS"
+    },
+    {
+      "check": "Verdict",
+      "status": "PASS",
+      "detail": "Verdict PASS, judges: [('judge_a', 'PASS'), ('judge_b', 'PASS')]"
+    }
+  ],
+  "summary": {
+    "passed": 8,
+    "total": 8,
+    "final_verdict": "PASS"
+  }
+}
