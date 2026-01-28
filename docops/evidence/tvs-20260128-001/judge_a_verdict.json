@@ -1,0 +1,15 @@
+{
+  "judge_id": "judge_a_codex",
+  "task_id": "tvs-20260128-001",
+  "checks": {
+    "evidence_files": "PASS",
+    "schema_validation": "PASS",
+    "merge_group_trigger": "PASS",
+    "required_check_name": "PASS",
+    "gate_report_summary": "PASS",
+    "verdict_status": "PASS"
+  },
+  "final_verdict": "PASS",
+  "reason": "All required evidence files present; schemas validate; workflow checks and report/verdict statuses are PASS.",
+  "timestamp": "2026-01-28T13:35:42.820207Z"
+}

@@ -1,9 +1,54 @@
 {
   "task_id": "tvs-20260128-001",
-  "repo": "shw097/spartoi-project",
-  "captured_at": "2026-01-28T13:22:49.344193+00:00",
+  "repo": "Spartoi-development-team/spartoi-project",
+  "captured_at": "2026-01-28T14:09:14.903425+00:00",
   "rulesets": {
-    "repo_rulesets": []
+    "repo_rulesets": [
+      {
+        "id": 12207798,
+        "name": "main",
+        "target": "branch",
+        "source_type": "Repository",
+        "source": "Spartoi-development-team/spartoi-project",
+        "enforcement": "active",
+        "node_id": "RRS_lACqUmVwb3NpdG9yec5ELwI6zgC6RrY",
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/Spartoi-development-team/spartoi-project/rulesets/12207798"
+          },
+          "html": {
+            "href": "https://github.com/Spartoi-development-team/spartoi-project/rules/12207798"
+          }
+        },
+        "created_at": "2026-01-28T05:55:14.523Z",
+        "updated_at": "2026-01-28T05:55:14.575Z"
+      },
+      {
+        "id": 12219645,
+        "name": "main-protection",
+        "target": "branch",
+        "source_type": "Repository",
+        "source": "Spartoi-development-team/spartoi-project",
+        "enforcement": "active",
+        "node_id": "RRS_lACqUmVwb3NpdG9yec5ELwI6zgC6dP0",
+        "_links": {
+          "self": {
+            "href": "https://api.github.com/repos/Spartoi-development-team/spartoi-project/rulesets/12219645"
+          },
+          "html": {
+            "href": "https://github.com/Spartoi-development-team/spartoi-project/rules/12219645"
+          }
+        },
+        "created_at": "2026-01-28T13:11:57.891Z",
+        "updated_at": "2026-01-28T13:11:57.943Z"
+      }
+    ]
   },
-  "attestations": []
+  "attestations": [],
+  "repo_visibility": "public",
+  "repo_owner_type": "Organization",
+  "workflow_checks": {
+    "merge_group_trigger": true,
+    "workflow_file": ".github/workflows/docops-gatekit.yml"
+  }
 }
