@@ -7,7 +7,10 @@
     "repo": {"type": "string"},
     "captured_at": {"type": "string"},
     "rulesets": {"type": "object"},
-    "attestations": {"type": "array"}
+    "attestations": {"type": "array"},
+    "repo_visibility": {"type": "string"},
+    "repo_owner_type": {"type": "string"},
+    "workflow_checks": {"type": "object"}
   },
   "additionalProperties": false
 }
