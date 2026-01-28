@@ -1,7 +1,7 @@
 {
   "task_id": "tvs-20260128-001",
   "schema_version": "tvs-v0.4.1-§8.3",
-  "captured_at": "2026-01-28T14:42:33.291500+00:00",
+  "captured_at": "2026-01-28T14:59:25.130670+00:00",
   "A1_repo": {
     "full_name": "Spartoi-development-team/spartoi-project",
     "visibility": "public",
@@ -77,25 +77,25 @@
       "item": "approve_and_run",
       "description": "Settings > Actions > Fork pull request workflows > Require approval",
       "method": "MANUAL_ATTESTATION",
-      "screenshot_sha256": "PENDING_USER_INPUT",
-      "verified_at": null,
-      "note": "需要用戶提供截圖 SHA256"
+      "screenshot_sha256": "bc6466f8f7e53112e1147c48af3014d09e8a1351359035402754ef158fc291ef",
+      "verified_at": "2026-01-28T14:59:25.130670+00:00",
+      "verified_by": "user_attestation"
     },
     {
       "item": "token_permissions_default",
       "description": "Settings > Actions > Workflow permissions > Read repository contents",
       "method": "MANUAL_ATTESTATION",
-      "screenshot_sha256": "PENDING_USER_INPUT",
-      "verified_at": null,
-      "note": "需要用戶提供截圖 SHA256"
+      "screenshot_sha256": "01362aebceb60214ace118082e4cc4bedcaf99a55f3bb5c2f7ecad83e56a1ec3",
+      "verified_at": "2026-01-28T14:59:25.130670+00:00",
+      "verified_by": "user_attestation"
     },
     {
       "item": "expected_source",
       "description": "Org Settings > Actions > Fork pull request workflows from outside collaborators",
       "method": "MANUAL_ATTESTATION",
-      "screenshot_sha256": "PENDING_USER_INPUT",
-      "verified_at": null,
-      "note": "需要用戶提供截圖 SHA256（如適用）"
+      "screenshot_sha256": "8d029dce01b45713121dcb3f0a81b690f26c6fe39caa5585321ebd10b1cba33f",
+      "verified_at": "2026-01-28T14:59:25.130670+00:00",
+      "verified_by": "user_attestation"
     }
   ],
   "workflow_runs": {

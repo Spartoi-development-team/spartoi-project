@@ -2,7 +2,7 @@
   "task_id": "tvs-20260128-001",
   "tvs_version": "v0.4.1",
   "section": "§9 Acceptance Criteria",
-  "verified_at": "2026-01-28T14:49:07.334541+00:00",
+  "verified_at": "2026-01-28T14:59:35.501542+00:00",
   "checks": [
     {
       "check": "A1: Repo Org-owned Public",
@@ -32,7 +32,7 @@
     {
       "check": "B: Manual attestations",
       "status": "PASS",
-      "detail": "Attestation structure exists. Pending user input for: ['approve_and_run', 'token_permissions_default', 'expected_source']"
+      "detail": "All 3 attestations have SHA256"
     },
     {
       "check": "Gate Report (v2)",
