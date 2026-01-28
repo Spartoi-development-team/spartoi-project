@@ -1,0 +1,17 @@
+{
+  "task_id": "tvs-20260128-001",
+  "aggregator": "judge_aggregate.py (deterministic)",
+  "judge_a": {
+    "id": "judge_a_codex",
+    "verdict": "PASS",
+    "timestamp": "2026-01-28T13:35:42.820207Z"
+  },
+  "judge_b": {
+    "id": "judge_b_claude",
+    "verdict": "PASS",
+    "timestamp": "2026-01-28T13:31:00Z"
+  },
+  "final_verdict": "PASS",
+  "action": "進入 Merge Queue ✅",
+  "aggregated_at": "2026-01-28T13:45:59.539261+00:00"
+}

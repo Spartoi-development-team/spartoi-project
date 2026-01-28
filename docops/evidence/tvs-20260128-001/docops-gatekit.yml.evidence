@@ -1,0 +1,43 @@
+name: docops-gatekit
+
+on:
+  pull_request:
+  merge_group:
+
+permissions:
+  contents: read
+
+jobs:
+  finalize:
+    name: docops-gatekit/finalize
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@a5ac7e51b41094c92402da3b24376905380afc29
+
+      - name: Setup Python
+        uses: actions/setup-python@f677139bbe7f9c59b41e40162b753c062f5d49a3
+        with:
+          python-version: "3.11"
+
+      - name: Install deps
+        run: pip install jsonschema pyyaml
+
+      - name: Detect TASK_ID
+        id: tid
+        run: |
+          TID="$(ls -1 docops/evidence | grep -v '^\.' | sort | tail -n 1)"
+          echo "TASK_ID=$TID" >> $GITHUB_ENV
+          echo "Detected: $TID"
+
+      - name: Run GateKit
+        run: python docops/scripts/run_gatekit.py "$TASK_ID"
+
+      - name: TVS Verify
+        run: ./docops/scripts/tvs_verify.sh "$TASK_ID"
+
+      - name: Upload Evidence
+        uses: actions/upload-artifact@b4b15b8c7c6ac21ea08fcf65892d2ee8f75cf882
+        with:
+          name: evidence-${{ env.TASK_ID }}
+          path: docops/evidence/${{ env.TASK_ID }}
