@@ -1,0 +1,12 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "type": "object",
+  "required": ["task_id", "created_at", "gates", "summary"],
+  "properties": {
+    "task_id": {"type": "string"},
+    "created_at": {"type": "string"},
+    "gates": {"type": "array", "minItems": 1},
+    "summary": {"type": "object", "required": ["status"]}
+  },
+  "additionalProperties": false
+}

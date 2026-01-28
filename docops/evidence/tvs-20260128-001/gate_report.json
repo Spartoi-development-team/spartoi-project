@@ -1,0 +1,39 @@
+{
+  "task_id": "tvs-20260128-001",
+  "created_at": "2026-01-28T13:22:49.939035+00:00",
+  "gates": [
+    {
+      "id": "g0_input_seal",
+      "status": "PASS",
+      "evidence": [
+        "input_manifest.json"
+      ]
+    },
+    {
+      "id": "g3_schema",
+      "status": "PASS",
+      "evidence": [
+        "input_manifest.json",
+        "run_manifest.json",
+        "settings_evidence.json"
+      ]
+    },
+    {
+      "id": "g3_anti_platform",
+      "status": "PASS",
+      "evidence": [
+        "scanned"
+      ]
+    },
+    {
+      "id": "g4_dual_judge",
+      "status": "PASS",
+      "evidence": [
+        "verdict.json"
+      ]
+    }
+  ],
+  "summary": {
+    "status": "PASS"
+  }
+}

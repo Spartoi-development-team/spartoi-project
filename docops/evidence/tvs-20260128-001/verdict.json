@@ -1,0 +1,17 @@
+{
+  "task_id": "tvs-20260128-001",
+  "status": "PASS",
+  "judges": [
+    {
+      "id": "judge_a",
+      "status": "PASS",
+      "reason": "gate_report must PASS"
+    },
+    {
+      "id": "judge_b",
+      "status": "PASS",
+      "reason": "check name must be OK"
+    }
+  ],
+  "created_at": "2026-01-28T13:22:49.939411+00:00"
+}

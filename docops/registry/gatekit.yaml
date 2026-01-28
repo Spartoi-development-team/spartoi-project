@@ -1,0 +1,8 @@
+version: "0.3.0"
+required_checks:
+  - "docops-gatekit/finalize"
+gates:
+  - id: g0_input_seal
+  - id: g3_schema
+  - id: g3_anti_platform
+  - id: g4_dual_judge
