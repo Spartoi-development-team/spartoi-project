@@ -1,0 +1,60 @@
+{
+  "task_id": "tvs-20260128-001",
+  "schema_version": "tvs-v0.4.1-\u00a79",
+  "created_at": "2026-01-28T14:49:03.020673+00:00",
+  "gates": [
+    {
+      "id": "g0_input_seal",
+      "status": "PASS",
+      "evidence": [
+        "input_manifest.json"
+      ]
+    },
+    {
+      "id": "g0_merge_group_check",
+      "status": "PASS",
+      "evidence": [
+        "PASS: docops-gatekit.yml contains merge_group trigger",
+        "PASS: docops-gatekit.yml contains docops-gatekit/finalize job",
+        "INFO: docops-gatekit.yml triggers on pull_request",
+        "INFO: docops-gatekit.yml triggers on merge_group"
+      ]
+    },
+    {
+      "id": "g_finalize_check",
+      "status": "PASS",
+      "evidence": [
+        "PASS: Workflow contains job name 'docops-gatekit/finalize'",
+        "PASS: settings_evidence confirms finalize in required_status_checks"
+      ]
+    },
+    {
+      "id": "g3_schema",
+      "status": "PASS",
+      "evidence": [
+        "input_manifest.json",
+        "run_manifest.json",
+        "settings_evidence.json"
+      ]
+    },
+    {
+      "id": "g3_anti_platform",
+      "status": "PASS",
+      "evidence": [
+        "scanned"
+      ]
+    },
+    {
+      "id": "g4_dual_judge",
+      "status": "PASS",
+      "evidence": [
+        "verdict.json"
+      ]
+    }
+  ],
+  "summary": {
+    "status": "PASS",
+    "gates_total": 6,
+    "gates_passed": 6
+  }
+}

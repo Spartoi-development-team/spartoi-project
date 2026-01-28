@@ -1,1 +1,2 @@
 OK: required check = docops-gatekit/finalize
+SSOT: docops/registry/gatekit.yaml
