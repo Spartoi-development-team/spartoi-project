@@ -1,0 +1,44 @@
+{
+  "report_id": "RD01-FINAL-REPORT",
+  "requirement": "需求書 v1.1 RD-01: Phase 0 (Core + 2 Lanes)",
+  "generated_at": "2026-01-28T15:48:30.923588+00:00",
+  "evidence_files": [
+    "rd01_profiles_evidence.json",
+    "rd01_vibe_block_evidence.json",
+    "rd01_router_evidence.json"
+  ],
+  "verification_results": {
+    "RD01-1_Profiles": {
+      "requirement": "Phase 0 只啟用 Vibe + Dev; Spec/Ops disabled",
+      "evidence_id": "RD01-PROFILES-001",
+      "verdict": "PASS",
+      "details": {
+        "vibe_enabled": true,
+        "dev_enabled": true,
+        "spec_disabled": true,
+        "ops_disabled": true
+      }
+    },
+    "RD01-2_Vibe_Block": {
+      "requirement": "GV-04: Vibe PR 禁止 merge queue / auto-merge",
+      "evidence_id": "RD01-VIBE-BLOCK-001",
+      "verdict": "PASS",
+      "test_cases_passed": 2,
+      "test_cases_total": 2
+    },
+    "RD01-3_Router": {
+      "requirement": "敏感路徑 → Dev Lane + 機械 Gate",
+      "evidence_id": "RD01-ROUTER-001",
+      "verdict": "PASS",
+      "sensitive_paths_defined": 4,
+      "test_cases_passed": 5,
+      "test_cases_total": 5
+    }
+  },
+  "summary": {
+    "total_checks": 3,
+    "passed": 3,
+    "failed": 0
+  },
+  "final_verdict": "PASS"
+}

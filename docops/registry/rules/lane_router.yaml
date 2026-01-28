@@ -1,0 +1,58 @@
+# RD-01: Lane Router 規則 - Core + Lane 決策
+rule_id: LANE-ROUTER-001
+version: "1.0.0"
+description: "根據變更類型自動路由到適當的 Lane"
+source: "[需求書 v1.1 RD-01] Phase 0 Core + 2 lanes"
+
+# 敏感路徑定義
+sensitive_paths:
+  - pattern: "docops/registry/**"
+    description: "Registry 變更"
+    required_lane: "dev"
+    block_vibe: true
+  - pattern: "docops/schemas/**"
+    description: "Schema 變更"
+    required_lane: "dev"
+    block_vibe: true
+  - pattern: ".github/workflows/**"
+    description: "Workflow 變更"
+    required_lane: "dev"
+    block_vibe: true
+  - pattern: "CLAUDE.md"
+    description: "Constitution 變更"
+    required_lane: "dev"
+    block_vibe: true
+
+# Lane 決策矩陣
+lane_matrix:
+  vibe:
+    allowed_paths:
+      - "docs/**"
+      - "README.md"
+      - "*.md"  # 非敏感 markdown
+    blocked_paths: "see sensitive_paths"
+    tier: 0
+    merge_allowed: false
+  dev:
+    allowed_paths:
+      - "**/*"  # 所有路徑
+    required_gates:
+      - g0_input_seal
+      - g0_merge_group_check
+      - g_finalize_check
+      - g3_schema
+      - g3_anti_platform
+      - g4_dual_judge
+    tier: 1
+    merge_allowed: true
+
+# 路由決策邏輯
+routing_logic:
+  - condition: "changes_contain_sensitive_path"
+    action: "route_to_dev"
+    block_vibe: true
+  - condition: "label_is_vibe"
+    action: "route_to_vibe"
+    validate: "no_sensitive_paths"
+  - condition: "default"
+    action: "route_to_dev"

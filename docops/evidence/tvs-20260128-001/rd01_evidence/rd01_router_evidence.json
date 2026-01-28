@@ -1,0 +1,138 @@
+{
+  "evidence_id": "RD01-ROUTER-001",
+  "requirement": "RD-01: 敏感路徑命中 → 不能走 Vibe, 必須走 Dev + 機械 Gate",
+  "captured_at": "2026-01-28T15:48:09.619367+00:00",
+  "rule_file": "docops/registry/rules/lane_router.yaml",
+  "sensitive_paths": [
+    {
+      "pattern": "docops/registry/**",
+      "description": "Registry 變更",
+      "required_lane": "dev",
+      "block_vibe": true
+    },
+    {
+      "pattern": "docops/schemas/**",
+      "description": "Schema 變更",
+      "required_lane": "dev",
+      "block_vibe": true
+    },
+    {
+      "pattern": ".github/workflows/**",
+      "description": "Workflow 變更",
+      "required_lane": "dev",
+      "block_vibe": true
+    },
+    {
+      "pattern": "CLAUDE.md",
+      "description": "Constitution 變更",
+      "required_lane": "dev",
+      "block_vibe": true
+    }
+  ],
+  "lane_matrix": {
+    "vibe": {
+      "allowed_paths": [
+        "docs/**",
+        "README.md",
+        "*.md"
+      ],
+      "blocked_paths": "see sensitive_paths",
+      "tier": 0,
+      "merge_allowed": false
+    },
+    "dev": {
+      "allowed_paths": [
+        "**/*"
+      ],
+      "required_gates": [
+        "g0_input_seal",
+        "g0_merge_group_check",
+        "g_finalize_check",
+        "g3_schema",
+        "g3_anti_platform",
+        "g4_dual_judge"
+      ],
+      "tier": 1,
+      "merge_allowed": true
+    }
+  },
+  "test_cases": [
+    {
+      "test_id": "TC-ROUTER-001",
+      "description": "Registry 變更應路由到 Dev Lane",
+      "input": {
+        "changed_file": "docops/registry/gatekit.yaml"
+      },
+      "expected": {
+        "lane": "dev",
+        "vibe_blocked": true
+      },
+      "verdict": "PASS"
+    },
+    {
+      "test_id": "TC-ROUTER-002",
+      "description": "Schema 變更應路由到 Dev Lane",
+      "input": {
+        "changed_file": "docops/schemas/verdict.schema.json"
+      },
+      "expected": {
+        "lane": "dev",
+        "vibe_blocked": true
+      },
+      "verdict": "PASS"
+    },
+    {
+      "test_id": "TC-ROUTER-003",
+      "description": "Workflow 變更應路由到 Dev Lane",
+      "input": {
+        "changed_file": ".github/workflows/docops-gatekit.yml"
+      },
+      "expected": {
+        "lane": "dev",
+        "vibe_blocked": true
+      },
+      "verdict": "PASS"
+    },
+    {
+      "test_id": "TC-ROUTER-004",
+      "description": "純文檔變更可走 Vibe Lane (但不能 merge)",
+      "input": {
+        "changed_file": "docs/guide.md"
+      },
+      "expected": {
+        "lane": "vibe",
+        "merge_allowed": false
+      },
+      "verdict": "PASS"
+    },
+    {
+      "test_id": "TC-ROUTER-005",
+      "description": "Dev Lane 必須經過所有 required gates",
+      "input": {
+        "lane": "dev"
+      },
+      "expected": {
+        "required_gates": [
+          "g0_input_seal",
+          "g0_merge_group_check",
+          "g_finalize_check",
+          "g3_schema",
+          "g3_anti_platform",
+          "g4_dual_judge"
+        ]
+      },
+      "actual": {
+        "required_gates": [
+          "g0_input_seal",
+          "g0_merge_group_check",
+          "g_finalize_check",
+          "g3_schema",
+          "g3_anti_platform",
+          "g4_dual_judge"
+        ]
+      },
+      "verdict": "PASS"
+    }
+  ],
+  "verdict": "PASS"
+}
