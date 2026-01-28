@@ -1,0 +1,75 @@
+{
+  "evidence_id": "RD01-VIBE-BLOCK-001",
+  "requirement": "GV-04: Vibe PR 禁 auto-merge、禁進 merge queue，只能 promotion",
+  "captured_at": "2026-01-28T15:47:28.425780+00:00",
+  "rule_file": "docops/registry/rules/vibe_merge_block.yaml",
+  "rule_content": {
+    "rule_id": "VIBE-MERGE-BLOCK-001",
+    "version": "1.0.0",
+    "description": "Vibe Lane PR 禁止進入 Merge Queue，只能 Promote",
+    "source": "[需求書 v1.1 GV-04] Vibe PR 禁 auto-merge、禁進 merge queue，只能 promotion",
+    "triggers": [
+      {
+        "event": "pull_request",
+        "conditions": [
+          {
+            "label_contains": "[VIBE]"
+          },
+          {
+            "branch_prefix": "vibe/"
+          }
+        ]
+      }
+    ],
+    "actions": {
+      "block_merge_queue": true,
+      "block_auto_merge": true,
+      "allowed_actions": [
+        "promote_to_spec",
+        "close",
+        "request_changes"
+      ]
+    },
+    "enforcement": "STRICT",
+    "fail_action": "BLOCK"
+  },
+  "test_cases": [
+    {
+      "test_id": "TC-VIBE-001",
+      "description": "Vibe PR with [VIBE] label should be blocked from merge queue",
+      "input": {
+        "label": "[VIBE]",
+        "branch": "vibe/feature-x"
+      },
+      "expected": {
+        "merge_queue_allowed": false,
+        "auto_merge_allowed": false
+      },
+      "actual": {
+        "merge_queue_allowed": false,
+        "auto_merge_allowed": false
+      },
+      "verdict": "PASS"
+    },
+    {
+      "test_id": "TC-VIBE-002",
+      "description": "Vibe PR should only allow promote action",
+      "input": {
+        "action": "promote_to_spec"
+      },
+      "expected": {
+        "allowed": true
+      },
+      "actual": {
+        "allowed": true
+      },
+      "verdict": "PASS"
+    }
+  ],
+  "enforcement_evidence": {
+    "enforcement_level": "STRICT",
+    "fail_action": "BLOCK",
+    "is_strict": true
+  },
+  "verdict": "PASS"
+}

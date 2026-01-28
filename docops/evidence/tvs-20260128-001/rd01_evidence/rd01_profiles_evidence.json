@@ -1,0 +1,49 @@
+{
+  "evidence_id": "RD01-PROFILES-001",
+  "requirement": "RD-01 Phase 0: 只啟用 Vibe + Dev Lane; Spec/Ops disabled",
+  "captured_at": "2026-01-28T15:46:50.931729+00:00",
+  "profiles": {
+    "dev": {
+      "file": "profiles/dev.yaml",
+      "content": {
+        "id": "dev",
+        "enabled": true,
+        "merge_allowed": true
+      },
+      "enabled": true
+    },
+    "vibe": {
+      "file": "profiles/vibe.yaml",
+      "content": {
+        "id": "vibe",
+        "enabled": true,
+        "merge_allowed": false
+      },
+      "enabled": true
+    },
+    "ops": {
+      "file": "profiles/ops.yaml",
+      "content": {
+        "id": "ops",
+        "enabled": false
+      },
+      "enabled": false
+    },
+    "spec": {
+      "file": "profiles/spec.yaml",
+      "content": {
+        "id": "spec",
+        "enabled": false
+      },
+      "enabled": false
+    }
+  },
+  "validation": {
+    "vibe_enabled": true,
+    "dev_enabled": true,
+    "spec_disabled": true,
+    "ops_disabled": true
+  },
+  "phase0_compliant": true,
+  "verdict": "PASS"
+}
