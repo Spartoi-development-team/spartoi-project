@@ -1,6 +1,6 @@
 {
   "task_id": "tvs-20260129-001",
-  "created_at": "2026-01-29T15:40:00Z",
+  "created_at": "2026-01-29T16:10:00Z",
   "tvs_version": "v0.4.1",
   "evidence_paths": {
     "A_control_plane": [
@@ -45,7 +45,15 @@
     "run_manifest.json": "PRESENT",
     "gate_report.json": "PRESENT",
     "verdict.json": "PRESENT",
-    "settings_evidence.json": "PRESENT"
+    "settings_evidence.json": "PRESENT",
+    "judge_a_verdict.json": "PRESENT",
+    "judge_b_verdict.json": "PRESENT",
+    "final_aggregate_verdict.json": "PRESENT"
   },
-  "bundle_file": "tvs_v0.4.1_complete_evidence_bundle_v2.json"
+  "bundle_file": "tvs_v0.4.1_complete_evidence_bundle_v2.json",
+  "dual_judge": {
+    "judge_a_tool": "claude-code",
+    "judge_b_tool": "codex-gpt-5",
+    "aggregation_method": "deterministic_python_AND"
+  }
 }

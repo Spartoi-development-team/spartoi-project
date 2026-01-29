@@ -1,14 +1,10 @@
 {
   "task_id": "tvs-20260129-001",
-  "judge_a": {
-    "judge_id": "judge_a_codex",
-    "final_verdict": "PASS"
-  },
-  "judge_b": {
-    "judge_id": "judge_b_claude",
-    "final_verdict": "PASS"
-  },
+  "judge_a": "PASS",
+  "judge_a_tool": "claude-code",
+  "judge_b": "PASS",
+  "judge_b_tool": "codex-gpt-5",
   "aggregate_verdict": "PASS",
-  "reason": "Both Judge A (Codex) and Judge B (Claude) returned PASS. No swap-test conflict detected.",
-  "timestamp": "2026-01-29T15:33:00Z"
+  "aggregated_at": "2026-01-29T16:09:20Z",
+  "aggregation_method": "deterministic_python_AND"
 }
