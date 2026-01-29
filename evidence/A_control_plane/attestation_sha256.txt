@@ -1,0 +1,11 @@
+# B-Level Manual Attestation Screenshots SHA256
+# Generated: 2026-01-29T15:50:00Z
+# Task: tvs-20260129-001
+
+ee0e38801644d0497b3d6fd31e9606da6cc69db0b5fa41508efe3449fc206ce0  attestation_actions.png
+c3897fee2e2a40f4358b5c603173ee6ecf53e23a67fcdea76beef45fae509672  attestation_ruleset.png
+
+# Coverage:
+# B6 (Approve-and-Run): attestation_actions.png - "Require approval for first-time contributors"
+# B7 (Token Permissions): attestation_actions.png - "Read repository contents and packages permissions"
+# B8 (Required Check): attestation_ruleset.png - "docops-gatekit/finalize" in required checks

@@ -10,18 +10,7 @@
         "target": "branch",
         "source_type": "Repository",
         "source": "Spartoi-development-team/spartoi-project",
-        "enforcement": "active",
-        "node_id": "RRS_lACqUmVwb3NpdG9yec5ELwI6zgC6RrY",
-        "_links": {
-          "self": {
-            "href": "https://api.github.com/repos/Spartoi-development-team/spartoi-project/rulesets/12207798"
-          },
-          "html": {
-            "href": "https://github.com/Spartoi-development-team/spartoi-project/rules/12207798"
-          }
-        },
-        "created_at": "2026-01-28T05:55:14.523Z",
-        "updated_at": "2026-01-28T05:55:14.575Z"
+        "enforcement": "active"
       },
       {
         "id": 12219645,
@@ -29,22 +18,36 @@
         "target": "branch",
         "source_type": "Repository",
         "source": "Spartoi-development-team/spartoi-project",
-        "enforcement": "active",
-        "node_id": "RRS_lACqUmVwb3NpdG9yec5ELwI6zgC6dP0",
-        "_links": {
-          "self": {
-            "href": "https://api.github.com/repos/Spartoi-development-team/spartoi-project/rulesets/12219645"
-          },
-          "html": {
-            "href": "https://github.com/Spartoi-development-team/spartoi-project/rules/12219645"
-          }
-        },
-        "created_at": "2026-01-28T13:11:57.891Z",
-        "updated_at": "2026-01-28T13:11:57.943Z"
+        "enforcement": "active"
       }
     ]
   },
-  "attestations": [],
+  "attestations": [
+    {
+      "id": "B6_approve_and_run",
+      "screenshot": "attestation_actions.png",
+      "sha256": "ee0e38801644d0497b3d6fd31e9606da6cc69db0b5fa41508efe3449fc206ce0",
+      "setting": "Require approval for first-time contributors",
+      "attested_at": "2026-01-29T15:50:00Z",
+      "status": "PASS"
+    },
+    {
+      "id": "B7_token_permissions",
+      "screenshot": "attestation_actions.png",
+      "sha256": "ee0e38801644d0497b3d6fd31e9606da6cc69db0b5fa41508efe3449fc206ce0",
+      "setting": "Read repository contents and packages permissions",
+      "attested_at": "2026-01-29T15:50:00Z",
+      "status": "PASS"
+    },
+    {
+      "id": "B8_required_check",
+      "screenshot": "attestation_ruleset.png",
+      "sha256": "c3897fee2e2a40f4358b5c603173ee6ecf53e23a67fcdea76beef45fae509672",
+      "setting": "docops-gatekit/finalize in required status checks",
+      "attested_at": "2026-01-29T15:50:00Z",
+      "status": "PASS"
+    }
+  ],
   "repo_visibility": "public",
   "repo_owner_type": "Organization",
   "workflow_checks": {

@@ -169,6 +169,26 @@
       "lane_router.yaml"
     ]
   },
+  "B_level_attestations": {
+    "B6_approve_and_run": {
+      "screenshot": "attestation_actions.png",
+      "sha256": "ee0e38801644d0497b3d6fd31e9606da6cc69db0b5fa41508efe3449fc206ce0",
+      "setting": "Require approval for first-time contributors",
+      "status": "PASS"
+    },
+    "B7_token_permissions": {
+      "screenshot": "attestation_actions.png",
+      "sha256": "ee0e38801644d0497b3d6fd31e9606da6cc69db0b5fa41508efe3449fc206ce0",
+      "setting": "Read repository contents and packages permissions",
+      "status": "PASS"
+    },
+    "B8_required_check": {
+      "screenshot": "attestation_ruleset.png",
+      "sha256": "c3897fee2e2a40f4358b5c603173ee6ecf53e23a67fcdea76beef45fae509672",
+      "setting": "docops-gatekit/finalize in required status checks",
+      "status": "PASS"
+    }
+  },
   "tvs_section9_compliance": {
     "§9.1_input_seal": {"status": "PASS", "evidence": "B_execution_plane/input_manifest.json"},
     "§9.2_gate_report": {"status": "PASS", "evidence": "B_execution_plane/gate_report.json"},
@@ -176,6 +196,11 @@
     "§9.4_verdict": {"status": "PASS", "evidence": "B_execution_plane/verdict.json"},
     "§9.5_merge_group": {"status": "PASS", "evidence": "D_workflow/docops-gatekit.yml.evidence"},
     "§9.6_required_check": {"status": "PASS", "evidence": "docops-gatekit/finalize in ruleset"},
-    "overall": "PASS"
+    "B6_approve_and_run": {"status": "PASS", "evidence": "attestation_actions.png"},
+    "B7_token_permissions": {"status": "PASS", "evidence": "attestation_actions.png"},
+    "B8_required_check_screenshot": {"status": "PASS", "evidence": "attestation_ruleset.png"},
+    "overall": "PASS",
+    "total_checks": 22,
+    "passed_checks": 22
   }
 }
