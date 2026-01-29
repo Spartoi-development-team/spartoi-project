@@ -92,7 +92,8 @@
   },
   "C_dual_judge": {
     "judge_a_verdict": {
-      "judge_id": "judge_a_codex",
+      "judge_id": "judge_a",
+      "tool": "claude-code",
       "task_id": "tvs-20260129-001",
       "final_verdict": "PASS",
       "checks": {
@@ -105,22 +106,29 @@
       }
     },
     "judge_b_verdict": {
-      "judge_id": "judge_b_claude",
+      "judge_id": "judge_b",
+      "tool": "codex-gpt-5",
       "task_id": "tvs-20260129-001",
-      "final_verdict": "PASS",
-      "checks": {
-        "claude_md_semantic": "PASS",
-        "evidence_consistency": "PASS",
-        "drift_detection": "PASS",
-        "phase0_config": "PASS",
-        "gatekit_semantic": "PASS",
-        "e2e_logic_chain": "PASS"
-      }
+      "verdict": "PASS",
+      "checks": [
+        {"id": "g0_input_seal", "status": "PASS"},
+        {"id": "g3_schema", "status": "PASS"},
+        {"id": "g3_anti_platform", "status": "PASS"},
+        {"id": "g4_dual_judge", "status": "PASS"},
+        {"id": "evidence_complete_replayable", "status": "PASS"},
+        {"id": "v0_scope_constraints", "status": "PASS"}
+      ],
+      "notes": "Independent verification by Codex"
     },
     "final_aggregate_verdict": {
       "task_id": "tvs-20260129-001",
+      "judge_a": "PASS",
+      "judge_a_tool": "claude-code",
+      "judge_b": "PASS",
+      "judge_b_tool": "codex-gpt-5",
       "aggregate_verdict": "PASS",
-      "reason": "Both Judge A and Judge B returned PASS"
+      "aggregated_at": "2026-01-29T16:09:20Z",
+      "aggregation_method": "deterministic_python_AND"
     }
   },
   "D_workflow": {

@@ -1,8 +1,8 @@
 {
   "task_id": "tvs-20260129-001",
   "tvs_version": "v0.4.1",
-  "section": "§9 Acceptance Criteria",
-  "evaluated_at": "2026-01-29T15:50:00Z",
+  "section": "§9 Acceptance Criteria + B-Level + Dual-Judge",
+  "evaluated_at": "2026-01-29T16:10:00Z",
   "criteria": [
     {"id": "§9.1", "name": "Input Seal", "status": "PASS", "evidence": "input_manifest.json with 7 docs SHA256"},
     {"id": "§9.2", "name": "Gate Report", "status": "PASS", "evidence": "gate_report.json - 4 gates all PASS"},
@@ -14,14 +14,22 @@
     {"id": "§9.8", "name": "Ruleset Active", "status": "PASS", "evidence": "2 rulesets enforcement=active"},
     {"id": "§9.9", "name": "Evidence Bundle", "status": "PASS", "evidence": "tvs_v0.4.1_complete_evidence_bundle_v2.json"},
     {"id": "§9.10", "name": "Phase-0 Profiles", "status": "PASS", "evidence": "vibe=true, dev=true, spec=false, ops=false"},
-    {"id": "§9.11", "name": "PR Merged via MQ", "status": "PASS", "evidence": "PR #7 merged via merge_group"},
+    {"id": "§9.11", "name": "PR Merged via MQ", "status": "PASS", "evidence": "PR #7, #8 merged via merge_group"},
     {"id": "B6", "name": "Approve-and-Run", "status": "PASS", "evidence": "attestation_actions.png sha256:ee0e3880..."},
     {"id": "B7", "name": "Token Permissions Read", "status": "PASS", "evidence": "attestation_actions.png sha256:ee0e3880..."},
-    {"id": "B8", "name": "Required Check Screenshot", "status": "PASS", "evidence": "attestation_ruleset.png sha256:c3897fee..."}
+    {"id": "B8", "name": "Required Check Screenshot", "status": "PASS", "evidence": "attestation_ruleset.png sha256:c3897fee..."},
+    {"id": "DJ-1", "name": "Judge A (Claude)", "status": "PASS", "evidence": "judge_a_verdict.json final_verdict=PASS"},
+    {"id": "DJ-2", "name": "Judge B (Codex)", "status": "PASS", "evidence": "judge_b_verdict.json verdict=PASS"},
+    {"id": "DJ-3", "name": "Aggregate Verdict", "status": "PASS", "evidence": "final_aggregate_verdict.json aggregate=PASS"},
+    {"id": "DJ-4", "name": "Aggregation Method", "status": "PASS", "evidence": "deterministic_python_AND (non-LLM)"},
+    {"id": "NT-1", "name": "Negative Test g3_schema", "status": "PASS", "evidence": "negative_test_evidence.json NT-001"},
+    {"id": "NT-2", "name": "Negative Test g3_anti_platform", "status": "PASS", "evidence": "negative_test_evidence.json NT-002"},
+    {"id": "NT-3", "name": "Negative Test g4_dual_judge", "status": "PASS", "evidence": "negative_test_evidence.json NT-003"},
+    {"id": "RD01", "name": "Phase-0 RD01 Evidence", "status": "PASS", "evidence": "E_rd01_phase0/*.json complete"}
   ],
   "summary": {
-    "total": 14,
-    "passed": 14,
+    "total": 22,
+    "passed": 22,
     "failed": 0,
     "status": "PASS"
   }
