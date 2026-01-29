@@ -1,0 +1,10 @@
+{
+  "task_id": "tvs-20260129-001",
+  "captured_at": "2026-01-29T15:35:00Z",
+  "lane_router": {
+    "rule_file": "docops/registry/rules/lane_router.yaml",
+    "logic": "Routes PRs to vibe or dev lane based on profile flag",
+    "priority_order": ["profile=... flag", "title tag [VIBE]/[DEV]", "default=FAIL"]
+  },
+  "ref": "[RUNBOOK R2.6]"
+}

@@ -1,0 +1,12 @@
+{
+  "task_id": "tvs-20260129-001",
+  "captured_at": "2026-01-29T15:35:00Z",
+  "profiles": {
+    "vibe": {"enabled": true, "description": "Exploration prototype lane"},
+    "dev": {"enabled": true, "description": "Development lane with full gates"},
+    "spec": {"enabled": false, "description": "Specification lane (Phase 1+)"},
+    "ops": {"enabled": false, "description": "Operations lane (Phase 1+)"}
+  },
+  "phase": "Phase-0",
+  "dimensionality_reduction": "2 of 4 profiles enabled for v0"
+}

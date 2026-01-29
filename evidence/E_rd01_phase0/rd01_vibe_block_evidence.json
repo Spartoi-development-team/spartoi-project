@@ -1,0 +1,10 @@
+{
+  "task_id": "tvs-20260129-001",
+  "captured_at": "2026-01-29T15:35:00Z",
+  "vibe_merge_block": {
+    "rule_file": "docops/registry/rules/vibe_merge_block.yaml",
+    "logic": "PRs with profile=vibe are blocked from merge_group",
+    "test_result": "PASS"
+  },
+  "ref": "[SRS FR-GV-004][v0 Pack NORM-23]"
+}
