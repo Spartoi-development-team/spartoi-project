@@ -6,7 +6,10 @@
     "A_control_plane": [
       "evidence/A_control_plane/repo_info.json",
       "evidence/A_control_plane/settings_evidence.json",
-      "evidence/A_control_plane/rulesets_detail.json"
+      "evidence/A_control_plane/rulesets_detail.json",
+      "evidence/A_control_plane/attestation_sha256.txt",
+      "attestation_actions.png",
+      "attestation_ruleset.png"
     ],
     "B_execution_plane": [
       "evidence/B_execution_plane/input_manifest.json",

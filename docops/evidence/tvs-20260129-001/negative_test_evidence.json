@@ -1,0 +1,39 @@
+{
+  "task_id": "tvs-20260129-001",
+  "ref": "[SRS INV-007]",
+  "negative_tests": [
+    {
+      "test_id": "NT-001",
+      "target_gate": "g3_schema",
+      "negative_test_type": "remove_required_field",
+      "description": "Removed 'created_at' from input_manifest.json",
+      "expected_result": "FAIL",
+      "actual_result": "FAIL",
+      "notes": "Gate correctly detected missing required field, returned schema validation error"
+    },
+    {
+      "test_id": "NT-002",
+      "target_gate": "g3_anti_platform",
+      "negative_test_type": "inject_forbidden_keyword",
+      "description": "Injected 'UNIFIED_PLATFORM' keyword into test file",
+      "expected_result": "FAIL",
+      "actual_result": "FAIL",
+      "notes": "Gate correctly detected drift marker and blocked"
+    },
+    {
+      "test_id": "NT-003",
+      "target_gate": "g4_dual_judge",
+      "negative_test_type": "corrupt_gate_report",
+      "description": "Set gate_report summary.status to FAIL",
+      "expected_result": "FAIL",
+      "actual_result": "FAIL",
+      "notes": "Judge A correctly detected gate_report FAIL status"
+    }
+  ],
+  "summary": {
+    "total_tests": 3,
+    "all_correctly_failed": true,
+    "status": "PASS"
+  },
+  "timestamp": "2026-01-29T15:45:00Z"
+}
