@@ -1,0 +1,48 @@
+{
+  "task_id": "tvs-20260129-001",
+  "created_at": "2026-01-29T15:40:00Z",
+  "tvs_version": "v0.4.1",
+  "evidence_paths": {
+    "A_control_plane": [
+      "evidence/A_control_plane/repo_info.json",
+      "evidence/A_control_plane/settings_evidence.json",
+      "evidence/A_control_plane/rulesets_detail.json"
+    ],
+    "B_execution_plane": [
+      "evidence/B_execution_plane/input_manifest.json",
+      "evidence/B_execution_plane/run_manifest.json",
+      "evidence/B_execution_plane/gate_report.json",
+      "evidence/B_execution_plane/verdict.json"
+    ],
+    "C_dual_judge": [
+      "evidence/C_dual_judge/judge_a_verdict.json",
+      "evidence/C_dual_judge/judge_b_verdict.json",
+      "evidence/C_dual_judge/final_aggregate_verdict.json"
+    ],
+    "D_workflow": [
+      "evidence/D_workflow/docops-gatekit.yml.evidence"
+    ],
+    "E_rd01_phase0": [
+      "evidence/E_rd01_phase0/rd01_profiles_evidence.json",
+      "evidence/E_rd01_phase0/rd01_vibe_block_evidence.json",
+      "evidence/E_rd01_phase0/rd01_router_evidence.json"
+    ],
+    "F_rules_and_gates": [
+      "evidence/F_rules_and_gates/gatekit.yaml",
+      "evidence/F_rules_and_gates/g0_input_seal.py",
+      "evidence/F_rules_and_gates/g3_schema.py",
+      "evidence/F_rules_and_gates/g3_anti_platform.py",
+      "evidence/F_rules_and_gates/g4_dual_judge.py",
+      "evidence/F_rules_and_gates/vibe_merge_block.yaml",
+      "evidence/F_rules_and_gates/lane_router.yaml"
+    ]
+  },
+  "must_have_files": {
+    "input_manifest.json": "PRESENT",
+    "run_manifest.json": "PRESENT",
+    "gate_report.json": "PRESENT",
+    "verdict.json": "PRESENT",
+    "settings_evidence.json": "PRESENT"
+  },
+  "bundle_file": "tvs_v0.4.1_complete_evidence_bundle_v2.json"
+}

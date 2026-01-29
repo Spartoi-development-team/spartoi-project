@@ -1,0 +1,41 @@
+{
+  "task_id": "tvs-20260129-001",
+  "created_at": "2026-01-29T15:28:21Z",
+  "inputs": [
+    {
+      "name": "LBP_v1.1.0",
+      "path": "docs/GitHub Multi-Agent (模組化 Core + 4 Profiles) _LBP_v1.1.0.md",
+      "sha256": "e4a6305043565d4be4d2870b0ab79a9caaae07d34f44c9a4f8e70ef115de845c"
+    },
+    {
+      "name": "README_v1.1",
+      "path": "docs/GitHub Multi-Agent（模組化 Core + 4 Profiles）_README v1.1.md",
+      "sha256": "18fe66fabad104b66d4435cb5197894c2249718fc93fd2995a0d964ecafb7f55"
+    },
+    {
+      "name": "SRS_v1.1.0",
+      "path": "docs/GitHub Multi-Agent（模組化 Core + 4 Profiles）_SRS_v1.1.0.md",
+      "sha256": "3985964607d9c1cf38818003ac6a140c5648978d891162f3c50e8bc2512e96d0"
+    },
+    {
+      "name": "TVS_v0.4.1",
+      "path": "docs/GitHub Multi-Agent (模組化 Core + 4 Profiles) _Thin Vertical Slice_v0.4.1.md",
+      "sha256": "66947723bfb8376a9e4147bb499eb12354aa3ab4301387cda05b7880b451f6a9"
+    },
+    {
+      "name": "v0_Pack_v0.3.0",
+      "path": "docs/GitHub Multi-Agent (模組化 Core + 4 Profiles) _v0 最小三件套_v0.3.0.md",
+      "sha256": "80d7af28b83f36cbab5c8526eabbcddb450726c8d0ec10eab16a78378d7035a5"
+    },
+    {
+      "name": "RUNBOOK_WI_v1.1.0",
+      "path": "docs/GitHub Multi-Agent（模組化 Core + 4 Profiles）_施工RUNBOOK+WI_v1.1.0.md",
+      "sha256": "54d47b116b9889f270950470ef295e5a6db506b7ce2d74738cc5884614af3afa"
+    },
+    {
+      "name": "Architecture_Guide",
+      "path": "docs/GitHub Multi-Agent (模組化 Core + 4 Profiles) 架構指南.md",
+      "sha256": "4a29a450e70a61cda0832ca1b7561ab8149487140ec4de729abec59a5f0b0372"
+    }
+  ]
+}

@@ -1,0 +1,181 @@
+{
+  "meta": {
+    "task_id": "tvs-20260129-001",
+    "tvs_version": "v0.4.1",
+    "bundled_at": "2026-01-29T15:40:00Z",
+    "purpose": "TVS v0.4.1 §9 Acceptance Criteria - Complete Evidence Bundle",
+    "includes_rd01": true
+  },
+  "A_control_plane": {
+    "repo_info": {
+      "id": 1143931450,
+      "name": "spartoi-project",
+      "full_name": "Spartoi-development-team/spartoi-project",
+      "visibility": "public",
+      "owner_type": "Organization",
+      "default_branch": "main"
+    },
+    "settings_evidence": {
+      "task_id": "tvs-20260129-001",
+      "repo": "Spartoi-development-team/spartoi-project",
+      "captured_at": "2026-01-29T15:30:00Z",
+      "rulesets": {
+        "repo_rulesets": [
+          {
+            "id": 12207798,
+            "name": "main",
+            "target": "branch",
+            "enforcement": "active"
+          },
+          {
+            "id": 12219645,
+            "name": "main-protection",
+            "target": "branch",
+            "enforcement": "active"
+          }
+        ]
+      },
+      "workflow_checks": {
+        "merge_group_trigger": true,
+        "workflow_file": ".github/workflows/docops-gatekit.yml"
+      }
+    },
+    "rulesets_detail": [
+      {"id": 12207798, "name": "main", "enforcement": "active"},
+      {"id": 12219645, "name": "main-protection", "enforcement": "active"}
+    ]
+  },
+  "B_execution_plane": {
+    "input_manifest": {
+      "task_id": "tvs-20260129-001",
+      "created_at": "2026-01-29T15:28:21Z",
+      "inputs_count": 7,
+      "inputs": [
+        {"name": "LBP_v1.1.0", "sha256": "e4a6305043565d4be4d2870b0ab79a9caaae07d34f44c9a4f8e70ef115de845c"},
+        {"name": "README_v1.1", "sha256": "18fe66fabad104b66d4435cb5197894c2249718fc93fd2995a0d964ecafb7f55"},
+        {"name": "SRS_v1.1.0", "sha256": "3985964607d9c1cf38818003ac6a140c5648978d891162f3c50e8bc2512e96d0"},
+        {"name": "TVS_v0.4.1", "sha256": "66947723bfb8376a9e4147bb499eb12354aa3ab4301387cda05b7880b451f6a9"},
+        {"name": "v0_Pack_v0.3.0", "sha256": "80d7af28b83f36cbab5c8526eabbcddb450726c8d0ec10eab16a78378d7035a5"},
+        {"name": "RUNBOOK_WI_v1.1.0", "sha256": "54d47b116b9889f270950470ef295e5a6db506b7ce2d74738cc5884614af3afa"},
+        {"name": "Architecture_Guide", "sha256": "4a29a450e70a61cda0832ca1b7561ab8149487140ec4de729abec59a5f0b0372"}
+      ]
+    },
+    "run_manifest": {
+      "task_id": "tvs-20260129-001",
+      "runner": {"env": "codespaces"},
+      "git": {
+        "branch": "main",
+        "commit": "d6662cf278a51d42ee3940c4c47433378d9bb0d8"
+      },
+      "created_at": "2026-01-29T15:30:00Z"
+    },
+    "gate_report": {
+      "task_id": "tvs-20260129-001",
+      "created_at": "2026-01-29T15:34:41.004076+00:00",
+      "gates": [
+        {"id": "g0_input_seal", "status": "PASS"},
+        {"id": "g3_schema", "status": "PASS"},
+        {"id": "g3_anti_platform", "status": "PASS"},
+        {"id": "g4_dual_judge", "status": "PASS"}
+      ],
+      "summary": {"status": "PASS"}
+    },
+    "verdict": {
+      "task_id": "tvs-20260129-001",
+      "status": "PASS",
+      "judges": [
+        {"id": "judge_a", "status": "PASS"},
+        {"id": "judge_b", "status": "PASS"}
+      ],
+      "created_at": "2026-01-29T15:34:41.004588+00:00"
+    }
+  },
+  "C_dual_judge": {
+    "judge_a_verdict": {
+      "judge_id": "judge_a_codex",
+      "task_id": "tvs-20260129-001",
+      "final_verdict": "PASS",
+      "checks": {
+        "evidence_files": "PASS",
+        "schema_validation": "PASS",
+        "merge_group_trigger": "PASS",
+        "required_check_name": "PASS",
+        "gate_report_summary": "PASS",
+        "verdict_status": "PASS"
+      }
+    },
+    "judge_b_verdict": {
+      "judge_id": "judge_b_claude",
+      "task_id": "tvs-20260129-001",
+      "final_verdict": "PASS",
+      "checks": {
+        "claude_md_semantic": "PASS",
+        "evidence_consistency": "PASS",
+        "drift_detection": "PASS",
+        "phase0_config": "PASS",
+        "gatekit_semantic": "PASS",
+        "e2e_logic_chain": "PASS"
+      }
+    },
+    "final_aggregate_verdict": {
+      "task_id": "tvs-20260129-001",
+      "aggregate_verdict": "PASS",
+      "reason": "Both Judge A and Judge B returned PASS"
+    }
+  },
+  "D_workflow": {
+    "docops_gatekit_yml": {
+      "file": ".github/workflows/docops-gatekit.yml",
+      "triggers": ["pull_request", "merge_group"],
+      "jobs": ["finalize"],
+      "required_check_name": "docops-gatekit/finalize"
+    }
+  },
+  "E_rd01_phase0": {
+    "rd01_profiles_evidence": {
+      "profiles": {
+        "vibe": {"enabled": true},
+        "dev": {"enabled": true},
+        "spec": {"enabled": false},
+        "ops": {"enabled": false}
+      },
+      "phase": "Phase-0",
+      "dimensionality_reduction": "2 of 4 profiles enabled"
+    },
+    "rd01_vibe_block_evidence": {
+      "rule": "vibe_merge_block",
+      "logic": "PRs with profile=vibe are blocked from merge_group",
+      "test_result": "PASS"
+    },
+    "rd01_router_evidence": {
+      "rule": "lane_router",
+      "logic": "Routes PRs to vibe or dev lane based on profile flag"
+    }
+  },
+  "F_rules_and_gates": {
+    "gatekit_yaml": {
+      "version": "0.3.0",
+      "required_checks": ["docops-gatekit/finalize"],
+      "gates": ["g0_input_seal", "g3_schema", "g3_anti_platform", "g4_dual_judge"]
+    },
+    "gate_scripts": [
+      "g0_input_seal.py",
+      "g3_schema.py",
+      "g3_anti_platform.py",
+      "g4_dual_judge.py"
+    ],
+    "rule_files": [
+      "vibe_merge_block.yaml",
+      "lane_router.yaml"
+    ]
+  },
+  "tvs_section9_compliance": {
+    "§9.1_input_seal": {"status": "PASS", "evidence": "B_execution_plane/input_manifest.json"},
+    "§9.2_gate_report": {"status": "PASS", "evidence": "B_execution_plane/gate_report.json"},
+    "§9.3_dual_judge": {"status": "PASS", "evidence": "C_dual_judge/*"},
+    "§9.4_verdict": {"status": "PASS", "evidence": "B_execution_plane/verdict.json"},
+    "§9.5_merge_group": {"status": "PASS", "evidence": "D_workflow/docops-gatekit.yml.evidence"},
+    "§9.6_required_check": {"status": "PASS", "evidence": "docops-gatekit/finalize in ruleset"},
+    "overall": "PASS"
+  }
+}
